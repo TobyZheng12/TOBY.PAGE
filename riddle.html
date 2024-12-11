@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fef6e4;
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background-color: #f8b400;
+            color: white;
+            padding: 20px;
+        }
+
+        #riddle-container {
+            margin: 50px auto;
+            max-width: 500px;
+            padding: 20px;
+            border: 2px solid #f8b400;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #riddle {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        #answer {
+            font-size: 1.2em;
+            color: #555;
+            display: none;
+        }
+
+        button {
+            background-color: #f8b400;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e89b00;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        a {
+            color: #f8b400;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Riddle Generator</h1>
+</header>
+
+<div id="riddle-container">
+    <div id="riddle">Click the button to get a riddle!</div>
+    <div id="answer">Answer will be displayed here.</div>
+    <button onclick="generateRiddle()">New Riddle</button>
+    <button onclick="revealAnswer()">Reveal Answer</button>
+</div>
+
+<footer>
+    <p><a href="index.html">Back to About Me</a></p>
+</footer>
+
+<script>
+    const riddles = [
+        { riddle: "What has to be broken before you can use it?", answer: "An egg" },
+        { riddle: "I’m tall when I’m young, and I’m short when I’m old. What am I?", answer: "A candle" },
+        { riddle: "What month of the year has 28 days?", answer: "All of them" },
+        { riddle: "What is full of holes but still holds water?", answer: "A sponge" },
+        { riddle: "What question can you never answer yes to?", answer: "Are you asleep yet?" }
+        
+    ];
+
+    let currentRiddle = null;
+
+    function generateRiddle() {
+        const randomIndex = Math.floor(Math.random() * riddles.length);
+        currentRiddle = riddles[randomIndex];
+        document.getElementById('riddle').textContent = currentRiddle.riddle;
+        document.getElementById('answer').style.display = 'none';
+        document.getElementById('answer').textContent = currentRiddle.answer;
+    }
+
+    function revealAnswer() {
+        if (currentRiddle) {
+            document.getElementById('answer').style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
