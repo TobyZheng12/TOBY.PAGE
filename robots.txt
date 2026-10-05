@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tobyzheng12.github.io/TOBY.PAGE/sitemap.xml
