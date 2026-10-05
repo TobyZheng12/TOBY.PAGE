@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f5f2ea"/>
+  <circle cx="1050" cy="110" r="260" fill="none" stroke="#cad2cc" stroke-width="2"/>
+  <circle cx="1050" cy="110" r="200" fill="none" stroke="#dce9fb" stroke-width="58" opacity=".8"/>
+  <rect x="70" y="66" width="54" height="54" rx="27" fill="#10282c"/>
+  <text x="97" y="100" fill="#f5f2ea" font-family="Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle">TZ</text>
+  <text x="145" y="101" fill="#10282c" font-family="Arial,sans-serif" font-size="22" font-weight="700">TOBY ZHENG</text>
+  <text x="70" y="250" fill="#10282c" font-family="Arial,sans-serif" font-size="70" font-weight="700">Procurement thinking.</text>
+  <text x="70" y="332" fill="#0b61d8" font-family="Georgia,serif" font-size="72" font-style="italic">Technical fluency.</text>
+  <text x="70" y="413" fill="#10282c" font-family="Arial,sans-serif" font-size="70" font-weight="700">Measurable results.</text>
+  <line x1="70" y1="494" x2="1130" y2="494" stroke="#cad2cc" stroke-width="2"/>
+  <text x="70" y="550" fill="#465b5e" font-family="Arial,sans-serif" font-size="23">SUPPLY CHAIN  /  OPERATIONS  /  AI</text>
+</svg>
