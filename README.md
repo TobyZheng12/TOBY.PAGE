@@ -6,10 +6,9 @@ A lightweight, accessible portfolio for procurement, supply chain, and consultin
 
 Run `python3 -m http.server 8000` from the repository root, then open `http://localhost:8000`.
 
-## Before publishing
+## Content maintenance
 
-- Replace the disabled resume control in `index.html` with a link to a supplied PDF.
-- Replace the clearly marked project impact placeholder when reliable usage or learning outcomes are available.
+- Replace `assets/Yitong-Zheng-Resume.pdf` when the résumé is updated.
 - Confirm the canonical GitHub Pages URL if a custom domain is added.
 
 ## Deployment
