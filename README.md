@@ -10,7 +10,7 @@ Run `python3 -m http.server 8000` from the repository root, then open `http://lo
 
 - Replace `assets/Yitong-Zheng-Resume.pdf` when the résumé is updated.
 - Update `sitemap.xml` when adding public pages.
-- Confirm the canonical GitHub Pages URL if a custom domain is added.
+- The canonical custom domain is `https://yitongz.com/`.
 
 ## Deployment
 
