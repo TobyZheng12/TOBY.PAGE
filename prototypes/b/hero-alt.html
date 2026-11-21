@@ -1,0 +1,47 @@
+    <style>
+      /* Alternative opening: portrait-led. Same content as the recommended hero. */
+      .hero-alt{border-bottom:1px solid var(--rule)}
+      .ha-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:min(calc(100svh - 61px),780px)}
+      .ha-photo{position:relative;margin:0;background:#8d8f8e;overflow:hidden}
+      .ha-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 24%}
+      .ha-photo figcaption{position:absolute;left:20px;bottom:16px;color:#f4efe6;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+      .ha-text{display:flex;flex-direction:column;justify-content:center;padding:clamp(32px,5vw,72px) var(--gutter) clamp(32px,4vw,48px) clamp(32px,5vw,80px)}
+      .ha-text h1{font:400 clamp(2.4rem,4.4vw,3.9rem)/1.02 var(--serif);letter-spacing:-.02em;font-variation-settings:"opsz" 72;margin:14px 0 20px}
+      .ha-text .lede{max-width:36ch}
+      .ha-text .spec{grid-template-columns:1fr 1fr;max-width:620px}
+      .ha-text .spec div:nth-child(odd){padding-left:0;border-left:0}
+      .ha-text .spec div:nth-child(n+3){border-top:1px solid var(--rule)}
+      @media (max-width:860px){
+        .ha-grid{grid-template-columns:1fr;min-height:0}
+        .ha-photo{aspect-ratio:16/11}
+        .ha-photo img{object-position:50% 16%}
+        .ha-photo figcaption{display:none}
+        .ha-text{padding:22px var(--gutter) 40px}
+        .ha-text h1{font-size:2.3rem;margin:8px 0 14px}
+        .ha-text .lede{margin-bottom:22px}
+        .ha-text .spec{margin-top:28px;grid-template-columns:1fr}.ha-text .spec div,.ha-text .spec div+div{display:grid;grid-template-columns:minmax(0,38%) 1fr;gap:12px;padding:11px 0;border-left:0;border-top:1px solid var(--rule)}.ha-text .spec div:first-child{border-top:0}.ha-text .btn{flex:1 1 100%;justify-content:center}.ha-text .actions{gap:4px 22px}
+      }
+    </style>
+    <section class="hero-alt" id="top" aria-labelledby="name">
+      <div class="ha-grid">
+        <figure class="ha-photo">
+          <img src="../../assets/img/toby-zheng-portrait.webp" alt="Toby Zheng smiling, in a navy suit and glasses" width="760" height="1068" fetchpriority="high">
+        </figure>
+        <div class="ha-text">
+          <p class="label">BYU Marriott School of Business</p>
+          <h1 id="name">Yitong (Toby) Zheng</h1>
+          <p class="lede">I’m a Global Supply Chain Management student at BYU, preparing for a career in procurement. I learn by asking good questions and building practical tools.</p>
+          <div class="actions">
+            <a class="btn" href="#work">See my work <span class="arr" aria-hidden="true">↓</span></a>
+            <a class="tlink" href="../../assets/Yitong-Zheng-Resume.pdf">Résumé (PDF)</a>
+            <a class="tlink" href="https://www.linkedin.com/in/yitong-zheng-/">LinkedIn</a>
+          </div>
+          <dl class="spec" aria-label="At a glance">
+            <div><dt class="label">Languages</dt><dd>Mandarin, English, Spanish (learning)</dd></div>
+            <div><dt class="label">Most recent</dt><dd>Procurement Intern, Caterpillar (Wuxi, China)</dd></div>
+            <div><dt class="label">Mission</dt><dd>Houston, Dec 2026 – Dec 2028</dd></div>
+            <div><dt class="label">Graduation</dt><dd>Fall 2029 (expected)</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>

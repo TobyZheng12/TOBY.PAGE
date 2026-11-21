@@ -123,6 +123,15 @@ The current public site and the résumé PDF it links to disagree. Resolve each 
 | Personal Gmail on the site | Keep it, with the existing "limited access Dec 2026–2028" note | It is still useful after the mission and for recruiters later |
 | `profile.jpg`, `favicon copy.ico`, `og-preview.svg` | Check what still uses them, then delete the unused ones | Housekeeping |
 
-## 9. Prototypes
+## 9. Visual identity (Prototype B design pass)
 
-`prototypes/a/` and `prototypes/b/` are review-only (`noindex`) and not linked from the live site. **Direction chosen: B**, with A's compact role list. The first versions (commit ac00948) contain draft lines Toby has not approved; the refined B supersedes them.
+- **Palette:** warm paper `#f4efe6` and teal-ink `#13262a` (continuity with the current site), graphite `#4b5758` for secondary text, warm hairlines `#cdc3b1`, and **one accent: seal vermilion `#b23b25`**. It refers to a Chinese name seal (a personal signature) and to red-pen markup on drawings and cost sheets. The generic SaaS blue is retired. All text pairs pass WCAG AA in light and dark modes.
+- **Type:** Newsreader (serif, name and headings: a warm, human voice), IBM Plex Sans (body; engineered, industrial heritage), IBM Plex Mono (labels and dates in a spec-sheet / drawing title-block style). Self-hosted, SIL OFL; licenses in `prototypes/fonts/`.
+- **Language:** hairline rules and spec-sheet tables instead of rounded cards and pills; a red seal mark; one illustration per piece of work; numbered section labels.
+- **Composition:** the Caterpillar feature carries the most weight (narrative + should-cost illustration + pilot tools); CoffeeChat flips the layout; mentoring is a tinted typographic band; "My path" is a route line whose dashed red section marks the future.
+- **Interaction:** native `<details>` with a short height transition where supported; essentials are visible without interaction; 44px minimum touch targets; visible focus; reduced motion respected.
+- **Review layer:** `prototypes/b/review.html` (generated) holds the highlights, confirmation list and private claim boundaries. The visitor version contains none of these.
+
+## 10. Prototypes
+
+`prototypes/a/` and `prototypes/b/` are review-only (`noindex`) and not linked from the live site. **Direction chosen: B**, with A's compact role list. Build variants and single-file previews with `python3 prototypes/build_previews.py [OUT_DIR]`. The first versions (commit ac00948) contain draft lines Toby has not approved; the refined B supersedes them.

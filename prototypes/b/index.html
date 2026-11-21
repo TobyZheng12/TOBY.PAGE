@@ -1,257 +1,213 @@
 <!DOCTYPE html>
 <!--
-  PROTOTYPE B (refined), review only, do not link from the live site.
-  Direction chosen by Toby: B, plus A's compact role list.
-  Copy rules: only docs/brief.md §3a (confirmed) and §3b (résumé/site, marked .tbc
-  for confirmation). No $550K figure until its scope is confirmed. Strengths are
-  shown through actions; CliftonStrengths appear only in an expander.
-  Review mode (?review) highlights unconfirmed statements, numbered to match the
-  confirmation list.
+  Prototype B · visitor version (review only, not linked from the live site).
+  Review highlights and claim boundaries live in review.html, which
+  prototypes/build_previews.py generates from this file. Alternative opening
+  in hero-alt.html.
 -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Prototype B · Toby Zheng</title>
-  <link rel="stylesheet" href="../shared.css">
-  <style>
-    section{padding:52px 0}
-    section h2{font-size:clamp(1.45rem,3vw,2.2rem);margin-bottom:10px}
-    .intro{max-width:62ch;color:var(--soft);margin-bottom:24px}
-
-    /* Hero */
-    .hero{padding:32px 0 40px}
-    .hero-grid{display:grid;gap:20px}
-    @media (min-width:860px){.hero{padding:60px 0 56px}.hero-grid{grid-template-columns:280px 1fr;gap:56px;align-items:center}}
-    .portrait{width:100%;height:auto;max-width:280px;border-radius:24px;aspect-ratio:1/1;object-fit:cover;object-position:50% 18%}
-    .hero h1{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:10px}
-    .role{max-width:34ch;margin-bottom:8px;font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.35;font-weight:560;letter-spacing:-.01em}
-    .tagline{margin-bottom:18px;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--accent)}
-    .status{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:0;list-style:none}
-    .status li{padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:.8rem;color:var(--soft)}
-    .status b{color:var(--ink);font-weight:650}
-    .proof{display:grid;grid-template-columns:1fr 1fr;margin:0 0 22px;border:1px solid var(--line);border-radius:14px;background:var(--strong);overflow:hidden;max-width:560px}
-    .proof div{padding:14px 16px 12px}
-    .proof div+div{border-left:1px solid var(--line)}
-    .proof dt{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:720;letter-spacing:-.03em;color:var(--accent);line-height:1.05}
-    .proof dd{margin:4px 0 0;font-size:.8rem;line-height:1.35;color:var(--soft)}
-    @media (max-width:859px){.hero-top{display:flex;align-items:center;gap:16px;margin-bottom:12px}.hero-top h1{margin:0}.portrait{width:64px;height:64px;border-radius:50%;flex:0 0 64px}.hero .portrait-lg{display:none}}
-    @media (min-width:860px){.hero-top .portrait{display:none}}
-
-    /* Caterpillar case */
-    .case{background:var(--surface);border-block:1px solid var(--line)}
-    .steps{display:grid;gap:12px;margin:0 0 20px;padding:0;list-style:none}
-    @media (min-width:760px){.steps{grid-template-columns:repeat(4,1fr)}}
-    .steps li{padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:var(--strong)}
-    .steps .verb{display:block;margin-bottom:6px;font-size:.74rem;font-weight:750;letter-spacing:.1em;text-transform:uppercase;color:var(--warm)}
-    .steps p{margin:0;font-size:.93rem}
-    .case > .shell > details{margin:0 0 28px;max-width:760px}
-
-    .pilot{display:grid;gap:22px;padding:22px;border:1px solid var(--line);border-radius:20px;background:var(--strong)}
-    @media (min-width:900px){.pilot{grid-template-columns:.8fr 1.2fr;align-items:start}}
-    .pilot .stat{font-size:clamp(1.8rem,3.4vw,2.3rem);font-weight:720;color:var(--accent);letter-spacing:-.04em;line-height:1;margin-bottom:10px}
-    .pilot h3{font-size:1.2rem;margin-bottom:6px}
-    /* Who-did-what map */
-    .map{margin:0;display:grid;gap:8px}
-    .map .row{display:grid;grid-template-columns:132px 1fr;gap:12px;align-items:center;padding:10px 12px;border-radius:12px;font-size:.9rem}
-    @media (max-width:520px){.map .row{grid-template-columns:1fr;gap:2px}}
-    .map dt{font-size:.72rem;font-weight:750;letter-spacing:.08em;text-transform:uppercase}
-    .map dd{margin:0}
-    .row.mine{background:var(--accent);color:#fff}
-    @media (prefers-color-scheme:dark){.row.mine{color:#0b1213}}
-    .row.supplier{border:1.5px solid var(--accent)}
-    .row.pilot-act{border:1.5px dashed var(--accent);background:var(--accent-soft)}
-    .row.scale{border:1.5px dashed var(--line);color:var(--soft)}
-    .map figcaption{font-size:.74rem;color:var(--soft);margin-top:4px}
-
-    /* Built */
-    .cards{display:grid;gap:14px}
-    @media (min-width:760px){.cards{grid-template-columns:1.3fr 1fr}}
-    .card{padding:20px 22px;border:1px solid var(--line);border-radius:18px;background:var(--strong)}
-    .card .tag{margin-bottom:6px;font-size:.72rem;font-weight:750;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
-    .card p{margin-bottom:10px}
-    .card a{font-weight:650;color:var(--accent);font-size:.9rem}
-
-    /* People */
-    .people{border-top:1px solid var(--line)}
-    .people h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.01em}
-    .people .lead{max-width:62ch;font-size:1.02rem}
-    .people details{max-width:760px}
-
-    /* Path + roles */
-    .path{border-top:1px solid var(--line)}
-    .path-grid{display:grid;gap:36px}
-    @media (min-width:900px){.path-grid{grid-template-columns:1fr 1fr;gap:64px}}
-    .line{margin:0 0 4px;padding:0;list-style:none}
-    .line li{position:relative;padding:0 0 14px 24px;border-left:2px solid var(--line);font-size:.92rem}
-    .line li:last-child{border-left-color:transparent}
-    .line li::before{content:"";position:absolute;left:-7px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
-    .line li.next::before{background:var(--warm);border-color:var(--warm)}
-    .line b{font-weight:650}
-    .line span{color:var(--soft)}
-    .path h3{font-size:1.05rem;letter-spacing:0;margin-bottom:8px}
-    .roles{margin:0 0 12px;padding:0;list-style:none;font-size:.9rem}
-    .roles li{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}
-    .roles time{color:var(--soft);font-variant-numeric:tabular-nums}
-    .path a.full{font-weight:650;color:var(--accent);font-size:.9rem}
-
-    /* Review mode: highlights statements awaiting Toby's confirmation */
-    .review-toggle{margin-left:8px;padding:2px 8px;border:1px solid currentColor;border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:.72rem;cursor:pointer}
-    body.review .tbc{background:linear-gradient(transparent 55%,rgba(255,200,40,.55) 55%);border-radius:2px}
-    body.review .tbc::after{content:attr(data-n);display:inline-block;margin-left:3px;padding:0 5px;border-radius:8px;background:#b07800;color:#fff;font:700 .62rem/1.5 Inter,system-ui,sans-serif;font-style:normal;letter-spacing:0;vertical-align:super}
-    body.review .row.mine .tbc{background:none;text-decoration:underline wavy #ffd34d}
-  </style>
+  <meta name="color-scheme" content="light dark">
+  <title>Yitong (Toby) Zheng · Supply chain student, procurement</title>
+  <meta name="description" content="Yitong (Toby) Zheng is a BYU Global Supply Chain Management student preparing for a career in procurement.">
+  <link rel="preload" href="../fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="proto-banner">Prototype B (refined) · review only · <button class="review-toggle" type="button" aria-pressed="false">Show statements to confirm</button></div>
-  <header class="top"><div class="shell">
-    <a class="brand" href="#"><i aria-hidden="true">TZ</i>Toby Zheng</a>
-    <nav aria-label="Primary"><a href="#caterpillar">Work</a><a href="#path">About</a><a class="keep" href="#contact">Contact</a></nav>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head"><div class="wrap">
+    <a class="mark" href="#top"><span class="seal" aria-hidden="true">TZ</span>Toby Zheng</a>
+    <nav aria-label="Primary">
+      <a class="opt" href="#work">Work</a><a class="opt" href="#path">About</a><a href="#contact">Contact</a>
+    </nav>
   </div></header>
 
-  <main>
-    <section class="hero" aria-labelledby="name"><div class="shell hero-grid">
-      <img class="portrait portrait-lg" src="../../assets/img/toby-zheng-portrait.webp" alt="Toby Zheng smiling in a navy suit and glasses" width="760" height="1068">
-      <div>
-        <div class="hero-top">
-          <img class="portrait" src="../../assets/img/toby-zheng-portrait.webp" alt="" width="64" height="64">
+  <main id="main">
+<!-- HERO:START -->
+    <section class="hero" id="top" aria-labelledby="name"><div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="label">BYU Marriott School of Business</p>
           <h1 id="name">Yitong (Toby) Zheng</h1>
+          <p class="lede">I’m a Global Supply Chain Management student at BYU, preparing for a career in procurement. I learn by asking good questions and building practical tools.</p>
+          <div class="actions">
+            <a class="btn" href="#work">See my work <span class="arr" aria-hidden="true">↓</span></a>
+            <a class="tlink" href="../../assets/Yitong-Zheng-Resume.pdf">Résumé (PDF)</a>
+            <a class="tlink" href="https://www.linkedin.com/in/yitong-zheng-/">LinkedIn</a>
+          </div>
         </div>
-        <p class="role">BYU Global Supply Chain Management student, preparing for a career in procurement.</p>
-        <p class="tagline"><span class="tbc" data-n="1">I ask good questions, then build what’s missing.</span></p>
-        <ul class="status" aria-label="Timeline">
-          <li><b>Dec 2026 – Dec 2028</b> · Mission, Houston</li>
-          <li><b>Fall 2029</b> · Expected graduation</li>
-        </ul>
-        <dl class="proof">
-          <div><dt>3</dt><dd>AI tools I built for should-cost analysis at Caterpillar</dd></div>
-          <div><dt>8</dt><dd><span class="tbc" data-n="4">inspection-digitization pilots I coordinated</span></dd></div>
-        </dl>
-        <div class="actions">
-          <a class="btn btn-primary" href="#caterpillar">See my work <span aria-hidden="true">↓</span></a>
-          <a class="btn" href="../../assets/Yitong-Zheng-Resume.pdf">Résumé ↗</a>
-          <a class="btn" href="https://www.linkedin.com/in/yitong-zheng-/">LinkedIn</a>
-        </div>
-      </div>
-    </div></section>
-
-    <section class="case" id="caterpillar" aria-labelledby="cat-h"><div class="shell">
-      <p class="eyebrow"><span class="tbc" data-n="2">Caterpillar · Wuxi, China · Procurement Intern · Summer 2026</span></p>
-      <h2 id="cat-h">My first corporate internship</h2>
-      <ul class="steps">
-        <li><span class="verb">Ask</span><p>I learned to ask good questions and learn from my teammates.</p></li>
-        <li><span class="verb">Go see</span><p>I visited suppliers to understand how cost-reduction opportunities work.</p></li>
-        <li><span class="verb">Analyze</span><p><span class="tbc" data-n="3">I built should-cost analyses for cutting, machining, welding and painting.</span></p></li>
-        <li><span class="verb">Reuse</span><p>I built 3 AI tools to help the team with future should-cost analysis.</p></li>
-      </ul>
-      <details>
-        <summary>More about this internship</summary>
-        <ul>
-          <li>It was my first time working in a corporate environment. I learned to communicate with confidence and build good relationships with my team.</li>
-          <li>I learned cost models, and how to use Excel and AI tools for data analysis.</li>
-          <li><span class="tbc" data-n="3">The should-cost analyses helped identify supplier-rate anomalies.</span></li>
-          <li>The AI tools also gave my team a new perspective on using AI.</li>
-          <li><span class="tbc" data-n="5">I also developed a risk-based supplier audit framework (connecting drawings, PPAP documents and work instructions) and redesigned supplier safety-stock templates with automated checks.</span></li>
-        </ul>
-      </details>
-
-      <div class="pilot">
-        <div>
-          <p class="stat"><span class="tbc" data-n="4">8 pilots · 2 suppliers</span></p>
-          <h3>Inspection-digitization pilots</h3>
-          <p class="muted"><span class="tbc" data-n="4">I coordinated pilots that tested digital inspection tools at two suppliers.</span></p>
-        </div>
-        <figure class="map" aria-label="Who did what in the inspection-digitization pilots">
-          <dl class="map" style="margin:0">
-            <div class="row mine"><dt>My part</dt><dd><span class="tbc" data-n="4">Coordinated the pilots</span></dd></div>
-            <div class="row supplier"><dt>Suppliers</dt><dd><span class="tbc" data-n="4">Two suppliers, where the pilots took place</span></dd></div>
-            <div class="row pilot-act"><dt>Pilot tools</dt><dd><span class="tbc" data-n="4">Bluetooth torque tools · laser measurement · automated CMM reports</span></dd></div>
-            <div class="row scale"><dt>At scale</dt><dd><span class="tbc" data-n="4">Not claimed</span></dd></div>
-          </dl>
+        <figure class="hero-figure">
+          <img class="portrait" src="../../assets/img/toby-zheng-portrait.webp" alt="Toby Zheng smiling, in a navy suit and glasses" width="760" height="1068" fetchpriority="high">
         </figure>
       </div>
+      <dl class="spec" aria-label="At a glance">
+        <div><dt class="label">Languages</dt><dd>Mandarin, English, Spanish (learning)</dd></div>
+        <div><dt class="label">Most recent</dt><dd>Procurement Intern, Caterpillar (Wuxi, China)</dd></div>
+        <div><dt class="label">Mission</dt><dd>Houston, Dec 2026 – Dec 2028</dd></div>
+        <div><dt class="label">Graduation</dt><dd>Fall 2029 (expected)</dd></div>
+      </dl>
     </div></section>
+<!-- HERO:END -->
 
-    <section aria-labelledby="built-h"><div class="shell">
-      <h2 id="built-h">Things I built for myself</h2>
-      <div class="cards">
-        <article class="card">
-          <p class="tag">CoffeeChat AI</p>
-          <p>Preparing for networking conversations in my second language was hard, so I built a tool that helps me prepare questions, keep a networking list, and follow up.</p>
-          <a href="https://coffeechat-ai-six.vercel.app/">Explore ↗</a>
+    <section class="sec" id="work" aria-labelledby="cat-h"><div class="wrap">
+      <div class="sec-head"><p class="label"><span class="n">01</span> &nbsp;Caterpillar · Summer 2026</p></div>
+      <div class="feature">
+        <div class="feature-text">
+          <h2 id="cat-h">Learning what a part should cost</h2>
+          <p class="intro">My first time working in a corporate environment. I learned to ask good questions, communicate with confidence, and build good relationships.</p>
+          <ol class="steps">
+            <li><span class="k">01</span><div><b>Go see</b><p>I visited suppliers to understand how cost-reduction opportunities work.</p></div></li>
+            <li><span class="k">02</span><div><b>Analyze</b><p>I built should-cost analyses for cutting, machining, welding and painting, which helped identify supplier-rate anomalies.</p></div></li>
+            <li><span class="k">03</span><div><b>Make it reusable</b><p>I built three AI tools to help with future should-cost analysis. They gave my team a new perspective on using AI.</p></div></li>
+          </ol>
           <details>
-            <summary>What I learned</summary>
-            <ul>
-              <li>How to use AI to build a product that solves my own problem.</li>
-              <li><span class="tbc" data-n="6">Built with Next.js, TypeScript, Supabase and Claude Code.</span></li>
-            </ul>
+            <summary><span class="pm" aria-hidden="true"></span>What else I worked on</summary>
+            <div class="dbody"><ul>
+              <li>I learned the math behind cost models, and how to use Excel and AI tools for data analysis.</li>
+              <li>I developed a risk-based supplier audit framework connecting drawings, PPAP documents and work instructions.</li>
+              <li>I redesigned supplier safety-stock templates with automated checks and risk ratings.</li>
+            </ul></div>
           </details>
-        </article>
-        <article class="card">
-          <p class="tag">Scripture Primer · 中文 / English</p>
-          <p><span class="tbc" data-n="6">A bilingual site for learning scripture stories before reading the full text.</span></p>
-          <a href="https://scripture-primer.vercel.app/">Visit ↗</a>
-        </article>
+        </div>
+
+        <figure class="feature-fig costfig" aria-labelledby="cf-cap">
+          <div class="fig-top"><span class="label">Should-cost vs. quote</span><span class="label">Illustration</span></div>
+          <ol class="cf">
+            <li><span class="t">Material</span><span class="track"><span class="bar" style="--s:0;--w:36"></span></span></li>
+            <li class="proc"><span class="t">Cutting</span><span class="track"><span class="bar" style="--s:36;--w:8"></span></span></li>
+            <li class="proc"><span class="t">Machining</span><span class="track"><span class="bar" style="--s:44;--w:15"></span></span></li>
+            <li class="proc"><span class="t">Welding</span><span class="track"><span class="bar" style="--s:59;--w:10"></span></span></li>
+            <li class="proc"><span class="t">Painting</span><span class="track"><span class="bar" style="--s:69;--w:6"></span></span></li>
+            <li><span class="t">Overhead, margin</span><span class="track"><span class="bar" style="--s:75;--w:10"></span></span></li>
+            <li class="sum"><span class="t">Should-cost</span><span class="track"><span class="bar" style="--s:0;--w:85"></span></span></li>
+            <li class="quote"><span class="t">Supplier quote</span><span class="track"><span class="bar" style="--s:0;--w:100"></span><span class="gap" style="--s:85;--w:15"></span></span></li>
+          </ol>
+          <p class="cf-note"><span>The gap is where the questions start</span></p>
+          <figcaption id="cf-cap"><span class="key"><i aria-hidden="true"></i>Processes I analyzed</span><span class="key"><i class="g" aria-hidden="true"></i>Other cost elements</span><span>How a should-cost comparison works. Not Caterpillar or supplier data.</span></figcaption>
+        </figure>
+
+        <div class="pilots">
+          <div class="lead">
+            <p class="label">Also at Caterpillar</p>
+            <p>I coordinated eight inspection-digitization pilots across two suppliers. They tested:</p>
+          </div>
+          <ul class="tools">
+            <li>
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 34 26 16"/><path d="M24 10a7 7 0 0 0 9.5 9.5l-3-3 1-4-4 1z"/><path d="M6 32l4 4"/><path d="M34 26l4-3-4-3v6l4 3-4 3"/></svg>
+              Bluetooth torque tools
+            </li>
+            <li>
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="15" width="12" height="16" rx="1.5"/><path d="M17 23h21" stroke-dasharray="2 3"/><path d="M38 17v12"/><path d="M9 20h4"/></svg>
+              Laser measurement
+            </li>
+            <li>
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 6h16l7 7v25H11z"/><path d="M27 6v7h7"/><path d="M15 20h15M15 25h15M15 30h9"/><path d="M27 31l2 2 4-4"/></svg>
+              Automated CMM reports
+            </li>
+          </ul>
+        </div>
       </div>
     </div></section>
 
-    <section class="people" aria-labelledby="people-h"><div class="shell">
-      <h2 id="people-h">I love mentoring, and getting mentored.</h2>
-      <p class="lead">As a BYU First-Year Experience peer mentor, I learned how to listen to, talk with and motivate others, and I practiced my English along the way.</p>
-      <details>
-        <summary>More</summary>
-        <ul>
-          <li><span class="tbc" data-n="7">I gave presentations and one-on-one coaching, and tracked students’ goals in Salesforce.</span></li>
-          <li>A professor I worked with in UNIV 101 inspired me to strengthen my faith and set personal goals, and that led to my decision to serve a mission.</li>
-          <li>My CliftonStrengths top five are Relator, Harmony, Deliberative, Restorative and Adaptability. I took the assessment as a freshman in an Authentic Leadership class, and it helps me understand my strengths and what to work on.</li>
-        </ul>
-      </details>
+    <section class="sec" aria-labelledby="cc-h" style="padding-top:0"><div class="wrap">
+      <div class="sec-head"><p class="label"><span class="n">02</span> &nbsp;Personal project</p></div>
+      <div class="project">
+        <figure class="project-fig flow" aria-labelledby="flow-cap">
+          <div class="flow-row">
+            <div class="stage"><p class="label">Before</p><ul><li>Questions to ask</li><li>People to meet</li></ul></div>
+            <div class="chat">Coffee<br>chat</div>
+            <div class="stage"><p class="label">After</p><ul><li>Follow-up advice</li><li>Reminders</li></ul></div>
+          </div>
+          <figcaption id="flow-cap">Where CoffeeChat AI helps, before and after a conversation.</figcaption>
+        </figure>
+        <div class="project-text">
+          <h2 id="cc-h">CoffeeChat AI</h2>
+          <dl class="facts">
+            <div><dt class="label">Problem</dt><dd>Preparing for networking conversations in my second language was hard.</dd></div>
+            <div><dt class="label">What I built</dt><dd>A tool that helps me prepare questions, keep a list of people to meet, and get follow-up advice and reminders.</dd></div>
+            <div><dt class="label">What I learned</dt><dd>How to use AI to build a product that solves my own problem.</dd></div>
+          </dl>
+          <div class="actions"><a class="tlink" href="https://coffeechat-ai-six.vercel.app/">Open CoffeeChat AI ↗</a></div>
+          <details>
+            <summary><span class="pm" aria-hidden="true"></span>How it’s built</summary>
+            <div class="dbody"><p>Next.js, TypeScript and Supabase, built with Claude Code.</p></div>
+          </details>
+        </div>
+        <div class="also">
+          <p class="label">Also built</p>
+          <p><b>Scripture Primer</b>, a bilingual (中文 / English) site for learning scripture stories before reading the full text. <a href="https://scripture-primer.vercel.app/">Visit ↗</a></p>
+        </div>
+      </div>
     </div></section>
 
-    <section class="path" id="path" aria-labelledby="path-h"><div class="shell path-grid">
-      <div>
-        <h2 id="path-h">My path</h2>
-        <ol class="line">
-          <li><b>China</b> <span>· grew up</span></li>
-          <li><b>United States</b> <span>· high school</span></li>
-          <li><b>BYU</b> <span>· Global Supply Chain Management</span></li>
-          <li class="next"><b>Houston</b> <span>· Mandarin-speaking mission, Dec 2026 – Dec 2028</span></li>
-          <li class="next"><b>BYU</b> <span>· expected graduation, Fall 2029</span></li>
-        </ol>
-        <details>
-          <summary>Why BYU, and why a mission</summary>
-          <p class="tbc" data-n="8" style="margin:12px 0 0;color:var(--soft);font-size:.92rem">I came to the U.S. for high school and chose BYU after a campus tour, and for its reputation and programs. At first I was afraid of religion. But at BYU I had many good experiences and met great people, and I made the big decision to join The Church of Jesus Christ of Latter-day Saints. Deciding to serve a mission was hard for me, and I made that decision too.</p>
-        </details>
+    <section class="sec band" aria-labelledby="people-h"><div class="wrap">
+      <div class="people">
+        <p class="label" id="people-h"><span class="n">03</span> &nbsp;Mentoring</p>
+        <blockquote>I love mentoring, <em>and getting mentored.</em></blockquote>
+        <div class="body">
+          <p>As a BYU First-Year Experience peer mentor, I learned how to listen to, talk with and motivate others, and I practiced my English along the way.</p>
+          <details>
+            <summary><span class="pm" aria-hidden="true"></span>More about mentoring</summary>
+            <div class="dbody">
+              <p>I gave presentations and one-on-one coaching, and tracked students’ goals in Salesforce.</p>
+              <p>A professor I worked with in UNIV 101 inspired me to strengthen my faith and set personal goals. That led to my decision to serve a mission.</p>
+              <p>My CliftonStrengths top five are Relator, Harmony, Deliberative, Restorative and Adaptability. I took the assessment as a freshman in an Authentic Leadership class, and it helps me understand my strengths and what to work on.</p>
+            </div>
+          </details>
+        </div>
       </div>
-      <div>
-        <h3>Selected experience</h3>
-        <ul class="roles tbc-list">
-          <li><time>2026</time><span><b>Caterpillar</b> · <span class="tbc" data-n="2">Procurement Intern</span></span></li>
-          <li><time>2026</time><span><b>BYU Marriott</b> · <span class="tbc" data-n="9">Research Assistant</span></span></li>
-          <li><time>2025–26</time><span><b>BYU</b> · First-Year Experience Peer Mentor</span></li>
-          <li><time>2025</time><span><b>Big Carp Technology</b> · <span class="tbc" data-n="9">Operations Intern</span></span></li>
-          <li><time>2024</time><span><b>SWORN.ai</b> · <span class="tbc" data-n="9">AI-Driven Industry Strategist</span></span></li>
-        </ul>
-        <a class="full" href="../../assets/Yitong-Zheng-Resume.pdf">Full history in my résumé ↗</a>
+    </div></section>
+
+    <section class="sec" id="path" aria-labelledby="path-h"><div class="wrap">
+      <div class="sec-head"><p class="label"><span class="n">04</span> &nbsp;About</p></div>
+      <h2 id="path-h" style="margin-bottom:clamp(28px,4vw,44px)">My path</h2>
+      <ol class="route">
+        <li><span class="place">China</span><span class="when label">Childhood</span></li>
+        <li><span class="place">United States</span><span class="when label">High school</span></li>
+        <li><span class="place">BYU</span><span class="when label">Provo, Utah</span><span class="what">Global Supply Chain Management</span></li>
+        <li><span class="place">Wuxi, China</span><span class="when label">2026</span><span class="what">Procurement Intern, Caterpillar</span></li>
+        <li class="next"><span class="place">Houston</span><span class="when label">Dec 2026 – Dec 2028</span><span class="what">Mandarin-speaking mission</span></li>
+        <li class="next"><span class="place">BYU</span><span class="when label">Fall 2029</span><span class="what">Expected graduation</span></li>
+      </ol>
+      <div class="path-cols">
+        <div class="path-story">
+          <p class="outside">Outside work, I like trying new sports, traveling, and learning cultures through their food.</p>
+          <details>
+            <summary><span class="pm" aria-hidden="true"></span>Why BYU, and why a mission</summary>
+            <div class="dbody">
+              <p>I came to the U.S. for high school, and I chose BYU after a campus tour because of its reputation and programs. At first I was afraid of religion. At BYU I had many good experiences and met great people, and I made the big decision to join The Church of Jesus Christ of Latter-day Saints.</p>
+              <p>Deciding to serve a mission was hard for me and came with many difficulties, but I made that decision.</p>
+            </div>
+          </details>
+        </div>
+        <div class="xp">
+          <h3 class="label">Experience</h3>
+          <ul>
+            <li><time>2026</time><span><span class="org">Caterpillar</span> · Procurement Intern</span></li>
+            <li><time>2026</time><span><span class="org">BYU Marriott</span> · Research Assistant</span></li>
+            <li><time>2025–26</time><span><span class="org">BYU</span> · First-Year Experience Peer Mentor</span></li>
+            <li><time>2025</time><span><span class="org">Big Carp Technology</span> · Operations Intern</span></li>
+            <li><time>2024</time><span><span class="org">SWORN.ai</span> · AI-Driven Industry Strategist</span></li>
+          </ul>
+          <p class="more"><a class="tlink" href="../../assets/Yitong-Zheng-Resume.pdf">Full history in my résumé (PDF)</a></p>
+        </div>
       </div>
     </div></section>
   </main>
 
-  <footer class="contact" id="contact"><div class="shell">
+  <footer class="contact" id="contact"><div class="wrap">
+    <p class="label">Contact</p>
     <h2>Let’s stay in touch.</h2>
     <div class="contact-grid">
-      <div><strong>Dec 2026 – Dec 2028</strong><a href="mailto:yitong.zheng@missionary.org">yitong.zheng@missionary.org</a> · <a href="https://www.facebook.com/toby.zheng.664793/">Facebook</a></div>
-      <div><strong>Anytime</strong><a href="https://www.linkedin.com/in/yitong-zheng-/">LinkedIn</a> · <a href="mailto:tobyzheng1202@gmail.com">tobyzheng1202@gmail.com</a> (limited access during my mission)</div>
+      <div><p class="label">Dec 2026 – Dec 2028</p><p><a href="mailto:yitong.zheng@missionary.org">yitong.zheng@missionary.org</a><br><a href="https://www.facebook.com/toby.zheng.664793/">Facebook</a></p></div>
+      <div><p class="label">Anytime</p><p><a href="https://www.linkedin.com/in/yitong-zheng-/">LinkedIn</a><br><a href="mailto:tobyzheng1202@gmail.com">tobyzheng1202@gmail.com</a> (limited access during my mission)</p></div>
+      <div><p class="label">Résumé</p><p><a href="../../assets/Yitong-Zheng-Resume.pdf">Download PDF</a></p></div>
     </div>
+    <p class="fine">© Toby Zheng · Provo, Utah</p>
   </div></footer>
-  <script>
-    (() => {
-      const btn = document.querySelector('.review-toggle');
-      const set = (on) => { document.body.classList.toggle('review', on); btn.setAttribute('aria-pressed', on); btn.textContent = on ? 'Hide statements to confirm' : 'Show statements to confirm'; };
-      set(new URLSearchParams(location.search).has('review'));
-      btn.addEventListener('click', () => set(!document.body.classList.contains('review')));
-    })();
-  </script>
 </body>
 </html>

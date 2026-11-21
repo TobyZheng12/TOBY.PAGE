@@ -1,0 +1,6 @@
+/* Review layer only. Never loaded by the visitor version. */
+.rv-bar{padding:16px var(--gutter);background:#fff1bf;color:#3d3100;font:400 .88rem/1.5 var(--sans);border-bottom:2px solid #d9b300}
+.rv-bar ol,.rv-bar ul{margin:6px 0 10px 22px;padding:0;list-style:revert;columns:2 360px;column-gap:40px}
+.rv-bar li{break-inside:avoid;margin-bottom:2px}
+mark.rv{background:linear-gradient(transparent 55%,rgba(255,196,0,.55) 55%);color:inherit;border-radius:2px}
+mark.rv::after{content:attr(data-n);display:inline-block;margin-left:3px;padding:0 5px;border-radius:8px;background:#9a6a00;color:#fff;font:600 .62rem/1.5 var(--sans);vertical-align:super}

@@ -4,6 +4,7 @@ Personal portfolio for Yitong (Toby) Zheng, served at https://yitongz.com/ by Gi
 
 - **Stack:** plain HTML, CSS and JS with no build step. Main page `index.html`, styles `css/styles.css`, behavior `js/scripts.js`.
 - **Preview:** `python3 -m http.server 8000` from the repo root. Check at 1440px and 375px wide, in light and dark themes.
+- **Prototype B:** `prototypes/b/` (`style.css`, `index.html`); regenerate `opening-alt.html`, `review.html` and previews with `python3 prototypes/build_previews.py [OUT_DIR]`.
 - **Brief:** read `docs/brief.md` before changing any copy. It holds the audience, the story, the **approved facts**, the résumé discrepancy checklist and the success criteria.
 
 ## Rules
