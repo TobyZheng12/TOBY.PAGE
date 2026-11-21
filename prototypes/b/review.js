@@ -4,23 +4,14 @@
 // claim boundaries.
 (() => {
   const ITEMS = [
-    [1, 'Procurement Intern', 'Caterpillar title: confirm against your official record.'],
-    [2, 'I built should-cost analyses for cutting, machining, welding and painting, which helped identify supplier-rate anomalies.', 'From your résumé. Confirm the processes and the anomalies outcome.'],
-    [3, 'I coordinated eight inspection-digitization pilots across two suppliers. They tested:', 'From your résumé. What did “coordinated” involve? Shown as pilots only.'],
-    [4, 'I developed a risk-based supplier audit framework connecting drawings, PPAP documents and work instructions.', 'From your résumé.'],
-    [4, 'I redesigned supplier safety-stock templates with automated checks and risk ratings.', 'From your résumé.'],
-    [15, 'Getting to Yes', 'No link or author given yet. Send the link you want, or I can leave it as plain text.'],
-    [5, 'The gap is where the questions start', 'My annotation on a generic illustration. Approve the illustration for public use (confidentiality check).'],
-    [6, 'Next.js, TypeScript and Supabase, built with Claude Code.', 'From your current site.'],
-    [6, 'a bilingual (中文 / English) site for learning scripture stories before reading the full text.', 'From your current site.'],
+    [2, 'cutting, machining, welding and painting', 'Still open: which of these processes you personally analyzed (your answer repeated the list in brackets).'],
+    [3, 'I coordinated eight inspection-digitization pilots across four suppliers.', 'Four suppliers confirmed. Still open: your exact role (your answer ended with “developed something specific, etc.”).'],
+    [3, 'Bluetooth torque tools', 'Still open: the full list of technologies (you mentioned “some other technologies”).'],
+    [5, 'The gap is where the questions start', 'Your edits applied; approve the illustration as shown.'],
+    [6, 'Next.js, TypeScript and Supabase, built with Claude Code.', 'From your old site; not yet confirmed.'],
     [12, 'All people, companies and details are fictional demo data.', 'Demo screenshots: fictional persona and data, not your activity or traction. Crops only; no UI altered.'],
-    [7, 'I gave presentations and one-on-one coaching, and tracked students’ goals in Salesforce.', 'From your résumé.'],
-    [9, 'Research Assistant', 'From your site; not on your résumé.'],
-    [9, 'Operations Intern', 'Résumé says “E-Commerce Operations Intern”.'],
     [10, 'I learn by asking good questions and building practical tools.', 'My paraphrase of your words for the opening.'],
-    [11, 'Outside work, I like trying new sports, traveling, and learning cultures through their food.', 'From your current site.'],
-    [11, 'I speak Mandarin and English, and I’m learning Spanish.', 'Languages moved from the opening. Mandarin and Spanish confirmed.'],
-    [13, 'supplier visits and should-cost analysis', 'Opening summary of Caterpillar: supplier visits confirmed; should-cost analysis is from your résumé.'],
+    [11, 'Outside work, I like trying new sports, traveling, and learning cultures through their food.', 'From your old site.'],
   ];
   const BOUNDARIES = [
     '$550K+ omitted until scope is confirmed (identified, validated or realized; one-time or annual; your share).',
