@@ -21,7 +21,6 @@
     [11, 'Outside work, I like trying new sports, traveling, and learning cultures through their food.', 'From your current site.'],
     [11, 'I speak Mandarin and English, and I’m learning Spanish.', 'Languages moved from the opening. Mandarin and Spanish confirmed.'],
     [13, 'supplier visits and should-cost analysis', 'Opening summary of Caterpillar: supplier visits confirmed; should-cost analysis is from your résumé.'],
-    [14, 'How to use AI to build a product that solves my own problem.', 'Awaiting one concrete design decision or lesson from you.'],
   ];
   const BOUNDARIES = [
     '$550K+ omitted until scope is confirmed (identified, validated or realized; one-time or annual; your share).',

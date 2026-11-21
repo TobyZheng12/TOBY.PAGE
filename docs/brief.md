@@ -31,7 +31,7 @@ Three tiers. Only **3a** is approved for public copy as-is. **3b** may appear in
 
 | Claim | Wording / limits |
 |---|---|
-| Education | BYU, B.S. Global Supply Chain Management, **expected graduation Fall 2029** |
+| Education | BYU, B.S. Global Supply Chain Management, **expected graduation Fall 2029** (always keep “expected”) |
 | Mission | Full-time missionary, Houston, Texas, **Mandarin-speaking**, **Dec 2026 – Dec 2028 (expected return)** |
 | Spanish | Learning Spanish; many missionaries in his mission serve in Spanish |
 | Mission-time contact | Missionary email and Facebook |
@@ -40,6 +40,7 @@ Three tiers. Only **3a** is approved for public copy as-is. **3b** may appear in
 | Caterpillar: skills | Learned cost models and how to use Excel and AI tools for data analysis |
 | Caterpillar: AI tools | **Built 3 AI tools** to help with future should-cost analysis; gave the team a new perspective on AI. Say "AI tools", not "agents" |
 | CoffeeChat AI | Grew from his own difficulty preparing for networking conversations in a second language. Helps him prepare questions, keep a networking list, and get follow-up advice and reminders. Built for himself. No user or usage claims |
+| CoffeeChat lesson | Learned to prioritize useful questions instead of generating more of them; short-call plans and “must ask” tags help him focus on what matters when time is limited |
 | Mentoring | Loves mentoring and getting mentored. As a BYU First-Year Experience peer mentor, learned to listen, talk with and motivate others, and practiced his English. A professor he worked with in UNIV 101 inspired his faith and personal goals and his decision to serve a mission (keep the professor unnamed) |
 | CliftonStrengths | Top five: Relator, Harmony, Deliberative, Restorative, Adaptability. Taken freshman year in an Authentic Leadership class; helps him understand his strengths and what to work on |
 | Faith journey | Came to the U.S. for high school; chose BYU after a campus tour and for its reputation and programs; was afraid of religion at first and did not accept the message in a high-school class; after experiences and people at BYU, decided to join the Church. **Exact public wording still needs approval** |
