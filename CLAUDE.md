@@ -2,6 +2,7 @@
 
 Personal portfolio for Yitong (Toby) Zheng, served at https://yitongz.com/ by GitHub Pages from `main`.
 
+- **Branches:** `main` holds only the published site (homepage, `legacy/`, assets), served by GitHub Pages from its root. This branch holds the sources: `prototypes/b/` (homepage design source), `resume/` (résumé source), `docs/` (brief). Tag `pre-redesign-2026-11-21` = site before the redesign.
 - **Stack:** plain HTML, CSS and JS with no build step. Main page `index.html`, styles `css/styles.css`, behavior `js/scripts.js`.
 - **Preview:** `python3 -m http.server 8000` from the repo root. Check at 1440px and 375px wide, in light and dark themes.
 - **Prototype B:** `prototypes/b/` (`style.css`, `index.html`); regenerate `opening-alt.html`, `review.html` and previews with `python3 prototypes/build_previews.py [OUT_DIR]`.
