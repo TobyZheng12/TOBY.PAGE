@@ -37,6 +37,7 @@ def inline(html: str) -> str:
         html = html.replace('<script src="review.js"></script>', f"<script>{(B / 'review.js').read_text()}</script>")
     portrait = data_uri(ROOT / "assets/img/toby-zheng-portrait.webp", "image/webp")
     html = html.replace("../../assets/img/toby-zheng-portrait.webp", portrait)
+    html = re.sub(r'\.\./img/([\w.-]+\.webp)', lambda m: data_uri(ROOT / "prototypes/img" / m.group(1), "image/webp"), html)
     return html.replace("../../assets/Yitong-Zheng-Resume.pdf", "https://yitongz.com/assets/Yitong-Zheng-Resume.pdf")
 
 def main():

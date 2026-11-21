@@ -12,6 +12,7 @@
     [5, 'The gap is where the questions start', 'My annotation on a generic illustration. Approve the illustration for public use (confidentiality check).'],
     [6, 'Next.js, TypeScript and Supabase, built with Claude Code.', 'From your current site.'],
     [6, 'a bilingual (中文 / English) site for learning scripture stories before reading the full text.', 'From your current site.'],
+    [12, 'All people, companies and details are fictional demo data.', 'Demo screenshots: fictional persona and data, not your activity or traction. Crops only; no UI altered.'],
     [7, 'I gave presentations and one-on-one coaching, and tracked students’ goals in Salesforce.', 'From your résumé.'],
     [8, 'Deciding to serve a mission was hard for me and came with many difficulties, but I made that decision.', 'Drafted from your words. Approve the wording of this paragraph.'],
     [9, 'Research Assistant', 'From your site; not on your résumé.'],
@@ -26,6 +27,7 @@
     'Pilots described as pilots only. No claim that any tool was rolled out at scale.',
     'CELS / Sandbox / PengPal omitted until you approve wording for your involvement.',
     'Professor kept unnamed. No quotes from anyone.',
+    'CoffeeChat screenshots are the public demo: the demo persona, contacts, conversations and counts are fictional and not presented as your activity, users or results. No live-AI claim is made from them.',
   ];
   const mark = (phrase, n, note) => {
     const walker = document.createTreeWalker(document.querySelector('main'), NodeFilter.SHOW_TEXT);

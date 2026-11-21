@@ -1,0 +1,26 @@
+Portfolio product screenshots — captured November 20, 2026
+
+CoffeeChat AI
+Website: https://coffeechat-ai-six.vercel.app/
+Public demo entry: https://coffeechat-ai-six.vercel.app/demo
+
+coffeechat-conversation-plan.png
+Recommended primary portfolio image. Shows a prepared conversation cheat sheet with an opening, goals, prioritized questions, and closing guidance.
+
+coffeechat-dashboard.png
+Supporting overview of conversations and follow-ups.
+
+coffeechat-follow-ups.png
+Supporting example of follow-up suggestions with their reasons.
+
+All CoffeeChat screenshots show the public demo. Its people, companies, conversations, and dates are fictional. Jordan is a demo persona, not Toby. These screens demonstrate the interface, not actual users, networking results, or measured impact. Demo scripts can use offline templates; screenshots alone do not verify live AI generation.
+
+Scripture Story Primer
+Website: https://scripture-primer.vercel.app/
+Captured screen: https://scripture-primer.vercel.app/en/stories/call-of-abraham
+
+scripture-primer-story.png
+Shows the English learning screen, Chinese story title, one-line summary, and short retelling. No learning-progress controls were changed.
+
+Design use
+Use the real product interface as portfolio evidence. Preserve image proportions. Focused crops are fine, but do not invent UI, alter sample content, or present demo characters as actual users. Keep fictional-demo context clear in the portfolio caption. Do not infer technology stacks, usage metrics, or user outcomes from these screenshots.

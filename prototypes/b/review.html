@@ -117,30 +117,45 @@
     <section class="sec" aria-labelledby="cc-h" style="padding-top:0"><div class="wrap">
       <div class="sec-head"><p class="label"><span class="n">02</span> &nbsp;Personal project</p></div>
       <div class="project">
-        <figure class="project-fig flow" aria-labelledby="flow-cap">
-          <div class="flow-row">
-            <div class="stage"><p class="label">Before</p><ul><li>Questions to ask</li><li>People to meet</li></ul></div>
-            <div class="chat">Coffee<br>chat</div>
-            <div class="stage"><p class="label">After</p><ul><li>Follow-up advice</li><li>Reminders</li></ul></div>
-          </div>
-          <figcaption id="flow-cap">Where CoffeeChat AI helps, before and after a conversation.</figcaption>
-        </figure>
-        <div class="project-text">
+        <div class="project-intro">
           <h2 id="cc-h">CoffeeChat AI</h2>
-          <dl class="facts">
-            <div><dt class="label">Problem</dt><dd>Preparing for networking conversations in my second language was hard.</dd></div>
-            <div><dt class="label">What I built</dt><dd>A tool that helps me prepare questions, keep a list of people to meet, and get follow-up advice and reminders.</dd></div>
-            <div><dt class="label">What I learned</dt><dd>How to use AI to build a product that solves my own problem.</dd></div>
-          </dl>
-          <div class="actions"><a class="tlink" href="https://coffeechat-ai-six.vercel.app/">Open CoffeeChat AI ↗</a></div>
-          <details>
-            <summary><span class="pm" aria-hidden="true"></span>How it’s built</summary>
-            <div class="dbody"><p>Next.js, TypeScript and Supabase, built with Claude Code.</p></div>
-          </details>
+          <div class="actions">
+            <a class="tlink" href="https://coffeechat-ai-six.vercel.app/demo">Try the public demo ↗</a>
+            <a class="tlink" href="https://coffeechat-ai-six.vercel.app/">Open CoffeeChat AI ↗</a>
+          </div>
         </div>
+        <dl class="facts project-facts">
+          <div><dt class="label">Problem</dt><dd>Preparing for networking conversations in my second language was hard.</dd></div>
+          <div><dt class="label">What I built</dt><dd>A tool that helps me prepare questions, keep a list of people to meet, and get follow-up advice and reminders.</dd></div>
+          <div><dt class="label">What I learned</dt><dd>How to use AI to build a product that solves my own problem.</dd></div>
+        </dl>
+        <figure class="shot shot-main">
+          <picture>
+            <source media="(max-width:620px)" srcset="../img/coffeechat-plan-questions.webp" width="388" height="194">
+            <img src="../img/coffeechat-plan.webp" width="1114" height="700" loading="lazy" alt="CoffeeChat AI demo screen: a 30-minute conversation plan for a fictional contact, with an opening line, three goals, six prioritized questions and closing guidance.">
+          </picture>
+          <figcaption><span class="label">Public demo</span> A conversation plan prepared before a coffee chat. <span class="nowrap">All people, companies and details are fictional demo data.</span></figcaption>
+        </figure>
+        <details class="project-more">
+          <summary><span class="pm" aria-hidden="true"></span>See the follow-up view, and how it’s built</summary>
+          <div class="dbody">
+            <figure class="shot">
+              <img src="../img/coffeechat-followups.webp" width="1114" height="425" loading="lazy" alt="CoffeeChat AI demo follow-ups screen: a suggested follow-up for a fictional contact, with the reason for the suggestion and a message angle.">
+              <figcaption>Follow-up suggestions, each with a reason. Fictional demo data.</figcaption>
+            </figure>
+            <p>Next.js, TypeScript and Supabase, built with Claude Code.</p>
+          </div>
+        </details>
         <div class="also">
-          <p class="label">Also built</p>
-          <p><b>Scripture Primer</b>, a bilingual (中文 / English) site for learning scripture stories before reading the full text. <a href="https://scripture-primer.vercel.app/">Visit ↗</a></p>
+          <div class="also-text">
+            <p class="label">Also built</p>
+            <p><b>Scripture Story Primer</b>, a bilingual (中文 / English) site for learning scripture stories before reading the full text.</p>
+            <p><a class="tlink" href="https://scripture-primer.vercel.app/">Visit Scripture Story Primer ↗</a></p>
+          </div>
+          <figure class="shot shot-small">
+            <picture><source media="(max-width:620px)" srcset="../img/scripture-primer-title.webp" width="440" height="110">
+            <img src="../img/scripture-primer-story.webp" width="780" height="375" loading="lazy" alt="Scripture Story Primer screen for “The Call of Abraham,” showing the Chinese title and a one-line summary of the story."></picture>
+          </figure>
         </div>
       </div>
     </div></section>

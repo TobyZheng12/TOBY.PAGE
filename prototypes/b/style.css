@@ -175,31 +175,29 @@ details[open]::details-content{block-size:auto}
 .dbody p+p{margin-top:10px}
 
 /* CoffeeChat ----------------------------------------------------------- */
-.project{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:36px;align-items:center}
-.project-fig{grid-column:1/span 6}
-.project-text{grid-column:8/span 5}
-.project h2{margin:10px 0 22px}
-.facts{display:grid;gap:0;margin-bottom:22px}
-.facts div{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)}
+.project{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:28px;align-items:start}
+.project-intro{grid-column:1/span 4}
+.project-intro h2{margin:0 0 14px}
+.project-intro .actions{flex-direction:column;align-items:flex-start;gap:0}
+.project-facts{grid-column:6/span 7;margin:0}
+.facts div{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--rule)}
 .facts div:last-child{border-bottom:1px solid var(--rule)}
 .facts dt{padding-top:3px}
-@media (max-width:900px){.project-fig,.project-text{grid-column:1/-1}.project-text{order:-1}}
-@media (max-width:520px){.facts div{grid-template-columns:1fr;gap:4px}}
-
-.flow{padding:clamp(28px,4vw,48px) clamp(20px,3vw,36px) 20px;background:var(--card);border:1px solid var(--rule)}
-.flow-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px}
-.stage{padding:18px 18px 20px;border-top:1.5px solid var(--ink);background:var(--paper)}
-.stage ul{margin-top:10px;display:grid;gap:8px;font-size:1.02rem}
-.stage li::before{content:"→ ";color:var(--seal)}
-.chat{display:grid;place-items:center;width:128px;height:128px;border-radius:50%;border:1.5px solid var(--ink);text-align:center;font:italic 400 1.15rem/1.15 var(--serif);position:relative}
-.chat::before,.chat::after{content:"";position:absolute;top:50%;width:14px;height:1.5px;background:var(--ink)}
-.chat::before{right:100%}.chat::after{left:100%}
-.flow figcaption{margin-top:16px;padding-top:12px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--graphite)}
-@media (max-width:620px){.flow{padding:20px 16px 16px}.flow-row{grid-template-columns:1fr;justify-items:stretch}.chat{width:auto;height:auto;border-radius:999px;padding:10px 18px;justify-self:center}.chat::before,.chat::after{left:50%;right:auto;width:1.5px;height:12px;top:auto}.chat::before{bottom:100%}.chat::after{top:100%}}
-.also{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;padding-top:22px;border-top:1px solid var(--rule)}
-.also .label{grid-column:1/span 2;padding-top:4px}
-.also p{grid-column:3/span 8}
-@media (max-width:900px){.also .label,.also p{grid-column:1/-1}.also p{margin-top:6px}}
+.shot{margin:0}
+.shot img{width:100%;height:auto;border:1px solid var(--rule);border-radius:3px;background:#fff;box-shadow:0 1px 0 var(--rule),0 18px 40px -24px rgba(19,38,42,.35)}
+.shot figcaption{margin-top:12px;font-size:.84rem;color:var(--graphite);display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+.shot-main{grid-column:1/-1;max-width:1114px}
+.project-more{grid-column:1/-1;margin-top:0}
+.project-more .dbody{max-width:none}
+.project-more .shot{max-width:860px;margin:4px 0 16px}
+.nowrap{white-space:nowrap}
+.also{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:16px;align-items:center;margin-top:20px;padding-top:28px;border-top:1px solid var(--rule)}
+.also-text{grid-column:1/span 5}
+.also-text .label{margin-bottom:10px}
+.also-text p+p{margin-top:6px}
+.shot-small{grid-column:7/span 6;max-width:780px}
+@media (max-width:900px){.project-intro,.project-facts,.also-text,.shot-small{grid-column:1/-1}}
+@media (max-width:620px){.facts div{grid-template-columns:1fr;gap:4px}.nowrap{white-space:normal}}
 
 /* People band ---------------------------------------------------------- */
 .band{background:var(--paper-2)}
