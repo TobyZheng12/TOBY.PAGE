@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--
+  PROTOTYPE A: "Proof first" (review only, do not link from the live site)
+  Intent: a refined version of the designer's tiles idea. Headline results are always
+  visible; the "how" lives in native <details>. Short "How I work" (CliftonStrengths
+  tied to evidence), a two-sentence story, a one-line-per-role background list.
+  Facts: docs/brief.md §3 only.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Prototype A · Proof first</title>
+  <link rel="stylesheet" href="../shared.css">
+  <style>
+    .hero{padding:22px 0 20px}
+    .hero-grid{display:grid;gap:24px;align-items:center}
+    @media (min-width:860px){.hero{padding:72px 0 40px}.hero-grid{grid-template-columns:1fr 260px;gap:56px}}
+    .hero h1{font-size:clamp(1.75rem,5.4vw,3.9rem);margin-bottom:14px}
+    .hero-lead{max-width:56ch;font-size:clamp(1rem,1.4vw,1.15rem);color:var(--soft);margin-bottom:20px}
+    .portrait{width:100%;height:auto;border-radius:var(--radius);aspect-ratio:4/5;object-fit:cover;object-position:50% 20%}
+    @media (max-width:859px){.portrait-wrap{display:none}.avatar{display:block!important}}
+    .id{display:flex;align-items:center;gap:12px;margin-bottom:12px}.id .eyebrow{margin:0}
+    .avatar{display:none;flex:0 0 48px;width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:50% 18%}
+    @media (max-width:859px){.hero-lead{font-size:.98rem;margin-bottom:14px}.status{margin-bottom:16px}.status li{font-size:.76rem;padding:5px 10px}.btn{min-height:42px;padding:0 15px}.work{padding-top:0}.work h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.status li{font-size:.74rem}}
+    .status{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+    .status li{padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:.8rem;color:var(--soft)}
+    .status b{color:var(--ink);font-weight:650}
+
+    .work{padding:12px 0 56px}
+    .work h2,.how h2,.about h2{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:22px}
+    .tiles{display:grid;gap:16px}
+    @media (min-width:760px){.tiles{grid-template-columns:1fr 1fr}}
+    .tile{display:flex;flex-direction:column;padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--strong)}
+    .tile .kicker{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin-bottom:10px}
+    .tile .result{font-size:clamp(2.1rem,4.4vw,3rem);font-weight:700;letter-spacing:-.04em;line-height:1;margin-bottom:8px;color:var(--accent)}
+    .tile .result.text{font-size:clamp(1.45rem,2.6vw,1.9rem);color:var(--ink)}
+    .tile .lead{margin-bottom:16px;font-size:.98rem}
+    .tile .viz{margin-top:auto;padding:14px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+    .tile .viz figcaption{margin-top:6px;font-size:.7rem;color:var(--soft)}
+    .tile .note{font-size:.75rem;color:var(--soft);margin:10px 0 0}
+    .tile a.more{font-size:.88rem;font-weight:650;color:var(--accent)}
+    .viz svg text{font-family:inherit}
+
+    .how{padding:56px 0;border-top:1px solid var(--line)}
+    .strengths{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    @media (min-width:860px){.strengths{grid-template-columns:repeat(5,1fr)}}
+    .strengths li{padding:16px;border-radius:14px;background:var(--surface);border:1px solid var(--line)}
+    .strengths b{display:block;margin-bottom:4px;font-size:.95rem}
+    .strengths span{font-size:.86rem;color:var(--soft)}
+    .how .sub{margin:-12px 0 20px;color:var(--soft);font-size:.92rem}
+
+    .about{padding:56px 0;border-top:1px solid var(--line)}
+    .about-grid{display:grid;gap:32px}
+    @media (min-width:860px){.about-grid{grid-template-columns:1.1fr 1fr;gap:64px}}
+    .about p{font-size:1.02rem}
+    .roles{margin:0;padding:0;list-style:none;font-size:.9rem}
+    .roles li{display:grid;grid-template-columns:76px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+    .roles time{color:var(--soft);font-variant-numeric:tabular-nums}
+  </style>
+</head>
+<body>
+  <div class="proto-banner">Prototype A · “Proof first” · review only</div>
+  <header class="top"><div class="shell">
+    <a class="brand" href="#"><i aria-hidden="true">TZ</i>Toby Zheng</a>
+    <nav aria-label="Primary"><a href="#work">Work</a><a href="#how">How I work</a><a href="#about">About</a><a class="keep" href="#contact">Contact</a></nav>
+  </div></header>
+
+  <main>
+    <section class="hero"><div class="shell hero-grid">
+      <div>
+        <div class="id"><img class="avatar" src="../../assets/img/toby-zheng-portrait.webp" alt="" width="48" height="48"><p class="eyebrow">BYU Marriott · Global Supply Chain Management</p></div>
+        <h1>Supply chain student. <span class="serif">Curious by habit.</span> I learn by building.</h1>
+        <p class="hero-lead">I’m Yitong “Toby” Zheng, heading into procurement and supply chain. I learn by asking good questions, working closely with people, and building what’s missing.</p>
+        <ul class="status" aria-label="Availability">
+          <li><b>Dec 2026 – Dec 2028</b> · Mission, Houston</li>
+          <li><b>Fall 2029</b> · Graduating</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-primary" href="../../assets/Yitong-Zheng-Resume.pdf">Résumé <span aria-hidden="true">↗</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/yitong-zheng-/">LinkedIn</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="portrait-wrap"><img class="portrait" src="../../assets/img/toby-zheng-portrait.webp" alt="Toby Zheng smiling in a navy suit and glasses" width="760" height="1068"></div>
+    </div></section>
+
+    <section class="work" id="work" aria-labelledby="work-h"><div class="shell">
+      <h2 id="work-h">Selected work</h2>
+      <div class="tiles">
+
+        <article class="tile">
+          <p class="kicker">Caterpillar · Procurement intern · 2026</p>
+          <p class="result">$550K+</p>
+          <p class="lead">in cost-reduction opportunities identified through should-cost analysis.</p>
+          <figure class="viz" style="margin:0">
+            <svg viewBox="0 0 320 96" role="img" aria-label="Illustration: a should-cost estimate built from cutting, machining, welding and painting, compared with a supplier quote; the gap is the opportunity.">
+              <text x="0" y="12" font-size="9" fill="currentColor" opacity=".7">Should-cost</text>
+              <rect x="0" y="18" width="58" height="20" rx="4" fill="var(--accent)" opacity=".95"/><text x="5" y="31" font-size="8.5" fill="#fff">Cutting</text>
+              <rect x="60" y="18" width="70" height="20" rx="4" fill="var(--accent)" opacity=".75"/><text x="65" y="31" font-size="8.5" fill="#fff">Machining</text>
+              <rect x="132" y="18" width="56" height="20" rx="4" fill="var(--accent)" opacity=".6"/><text x="137" y="31" font-size="8.5" fill="#fff">Welding</text>
+              <rect x="190" y="18" width="52" height="20" rx="4" fill="var(--accent)" opacity=".45"/><text x="195" y="31" font-size="8.5" fill="#fff">Painting</text>
+              <text x="0" y="60" font-size="9" fill="currentColor" opacity=".7">Supplier quote</text>
+              <rect x="0" y="66" width="300" height="20" rx="4" fill="currentColor" opacity=".18"/>
+              <rect x="242" y="66" width="58" height="20" rx="4" fill="var(--warm)"/><text x="248" y="79" font-size="8.5" fill="#fff">Gap</text>
+              <line x1="242" y1="40" x2="242" y2="64" stroke="var(--warm)" stroke-dasharray="3 3"/>
+            </svg>
+            <figcaption>Simplified illustration, not actual data.</figcaption>
+          </figure>
+          <details>
+            <summary>How I did it</summary>
+            <ul>
+              <li>Built should-cost models for cutting, machining, welding and painting, then compared them with supplier rates to flag anomalies.</li>
+              <li>Visited suppliers to see what actually drives their cost.</li>
+              <li>Built AI agents so the team’s next should-cost analysis starts faster.</li>
+            </ul>
+            <p class="learned">My first corporate job taught me to ask good questions, build relationships, and learn from the people around me.</p>
+          </details>
+          <p class="note">Opportunities identified, converted to USD. Not realized savings.</p>
+        </article>
+
+        <article class="tile">
+          <p class="kicker">Caterpillar · Supplier quality · 2026</p>
+          <p class="result">8 pilots</p>
+          <p class="lead">across two suppliers to digitize inspection. I helped judge which ideas were worth scaling.</p>
+          <figure class="viz" style="margin:0">
+            <svg viewBox="0 0 320 70" role="img" aria-label="Illustration: eight pilot ideas narrowing to the ones worth scaling.">
+              <g fill="var(--accent)">
+                <circle cx="12" cy="20" r="7"/><circle cx="34" cy="20" r="7"/><circle cx="56" cy="20" r="7"/><circle cx="78" cy="20" r="7"/>
+                <circle cx="12" cy="44" r="7"/><circle cx="34" cy="44" r="7"/><circle cx="56" cy="44" r="7"/><circle cx="78" cy="44" r="7"/>
+              </g>
+              <path d="M100 14 L190 26 L190 38 L100 50 Z" fill="currentColor" opacity=".12"/>
+              <text x="112" y="36" font-size="8.5" fill="currentColor" opacity=".8">try · track · compare</text>
+              <rect x="200" y="20" width="110" height="24" rx="12" fill="var(--warm)"/>
+              <text x="216" y="35" font-size="9" fill="#fff">Worth scaling?</text>
+            </svg>
+            <figcaption>Simplified illustration.</figcaption>
+          </figure>
+          <details>
+            <summary>How I did it</summary>
+            <ul>
+              <li>Pilots included Bluetooth torque tools, laser measurement and automated CMM reports.</li>
+              <li>Recommended pilots to suppliers, followed up on progress and roadblocks, and compared effort, timing and benefit.</li>
+              <li>Also built a risk-based supplier audit framework and automated safety-stock checks for coverage, lead time and data quality.</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="tile">
+          <p class="kicker">Personal project · CoffeeChat AI</p>
+          <p class="result text">I built my own networking coach.</p>
+          <p class="lead">Preparing for coffee chats in my second language took hours, so I built a tool to help me prepare and follow up.</p>
+          <figure class="viz" style="margin:0" aria-hidden="true">
+            <svg viewBox="0 0 320 78">
+              <rect x="0" y="0" width="320" height="78" rx="8" fill="var(--strong)" stroke="var(--line)"/>
+              <text x="12" y="18" font-size="9" font-weight="700" fill="currentColor">Before your chat</text>
+              <rect x="12" y="26" width="200" height="8" rx="4" fill="var(--accent)" opacity=".5"/>
+              <rect x="12" y="40" width="150" height="8" rx="4" fill="currentColor" opacity=".15"/>
+              <rect x="12" y="56" width="58" height="14" rx="7" fill="var(--accent-soft)"/><text x="20" y="66" font-size="7.5" fill="var(--accent)">Questions</text>
+              <rect x="76" y="56" width="52" height="14" rx="7" fill="var(--accent-soft)"/><text x="84" y="66" font-size="7.5" fill="var(--accent)">People</text>
+              <rect x="134" y="56" width="62" height="14" rx="7" fill="var(--accent-soft)"/><text x="141" y="66" font-size="7.5" fill="var(--accent)">Follow-up</text>
+            </svg>
+          </figure>
+          <details>
+            <summary>What it does</summary>
+            <ul>
+              <li>Suggests the best questions for each conversation, keeps my networking list, and reminds me to follow up.</li>
+              <li>Built with Next.js, TypeScript, Supabase and Claude Code.</li>
+            </ul>
+            <p class="learned">I built it to solve my own problem, and along the way I learned how to turn a personal need into a working product.</p>
+          </details>
+          <p class="note"><a class="more" href="https://coffeechat-ai-six.vercel.app/">Explore CoffeeChat AI ↗</a></p>
+        </article>
+
+        <article class="tile">
+          <p class="kicker">BYU · First-Year Experience peer mentor</p>
+          <p class="result text">Mentor, and always a mentee.</p>
+          <p class="lead">Coaching first-year students taught me to listen, explain clearly and motivate, and gave me daily practice in English.</p>
+          <figure class="viz" style="margin:0" aria-hidden="true">
+            <svg viewBox="0 0 320 64">
+              <rect x="0" y="6" width="170" height="30" rx="15" fill="var(--accent-soft)"/><text x="14" y="25" font-size="9" fill="var(--accent)">What’s your goal this semester?</text>
+              <rect x="120" y="32" width="190" height="28" rx="14" fill="var(--warm)" opacity=".9"/><text x="134" y="50" font-size="9" fill="#fff">Let’s plan the first step together.</text>
+            </svg>
+          </figure>
+          <details>
+            <summary>More</summary>
+            <ul>
+              <li>Gave presentations and one-on-one coaching; tracked student goals and follow-ups in Salesforce.</li>
+              <li>Working alongside a UNIV 101 professor shaped my goals and my faith, and led to my decision to serve a mission.</li>
+            </ul>
+          </details>
+        </article>
+
+      </div>
+    </div></section>
+
+    <section class="how" id="how" aria-labelledby="how-h"><div class="shell">
+      <h2 id="how-h">How I work</h2>
+      <p class="sub">My CliftonStrengths top five, and where they showed up.</p>
+      <ol class="strengths">
+        <li><b>1 · Relator</b><span>I build lasting relationships with mentors, managers and the students I mentor.</span></li>
+        <li><b>2 · Harmony</b><span>With suppliers, I look for the option both sides can say yes to.</span></li>
+        <li><b>3 · Deliberative</b><span>I weigh risk first, which is why I built a risk-based audit framework.</span></li>
+        <li><b>4 · Restorative</b><span>When a process breaks, I fix it: manual stock checks became automated ones.</span></li>
+        <li><b>5 · Adaptability</b><span>China, then a U.S. high school, BYU, supplier visits in Wuxi, and now Houston.</span></li>
+      </ol>
+    </div></section>
+
+    <section class="about" id="about" aria-labelledby="about-h"><div class="shell about-grid">
+      <div>
+        <h2 id="about-h">A little more about me</h2>
+        <p>I grew up in China and came to the U.S. for high school. A campus tour sold me on BYU. I was wary of religion when I arrived, but the people and experiences here changed me: I joined The Church of Jesus Christ of Latter-day Saints and chose to serve a Mandarin-speaking mission in Houston, even though it wasn’t an easy decision.</p>
+        <p class="muted">Outside work: trying new sports, backpacking, the Portland Trail Blazers, and learning cultures through their food.</p>
+      </div>
+      <ul class="roles" aria-label="Background">
+        <li><time>2026</time><span><b>Caterpillar</b> · Procurement intern, Wuxi</span></li>
+        <li><time>2026</time><span><b>BYU Marriott</b> · Research assistant</span></li>
+        <li><time>2026</time><span><b>BYU CELS</b> · Entrepreneurship coursework (PengPal concept)</span></li>
+        <li><time>2025–26</time><span><b>BYU</b> · First-Year Experience peer mentor</span></li>
+        <li><time>2025</time><span><b>Big Carp Technology</b> · Operations intern</span></li>
+        <li><time>2024</time><span><b>SWORN.ai</b> · AI-driven industry strategist intern</span></li>
+        <li><time>2022</time><span><b>RevRoad</b> · Intern, startup market analysis</span></li>
+        <li><time>2021–22</time><span><b>Harvard College Association for U.S.-China Relations</b> · Student ambassador</span></li>
+      </ul>
+    </div></section>
+  </main>
+
+  <footer class="contact" id="contact"><div class="shell">
+    <h2>Let’s stay in touch.</h2>
+    <p>I’m open to opportunities in procurement, supply chain and consulting where I can learn fast and contribute.</p>
+    <div class="contact-grid">
+      <div><strong>Dec 2026 – Dec 2028</strong><a href="mailto:yitong.zheng@missionary.org">yitong.zheng@missionary.org</a> · <a href="https://www.facebook.com/toby.zheng.664793/">Facebook</a></div>
+      <div><strong>Anytime</strong><a href="https://www.linkedin.com/in/yitong-zheng-/">LinkedIn</a> · <a href="mailto:tobyzheng1202@gmail.com">tobyzheng1202@gmail.com</a> (limited access during my mission)</div>
+    </div>
+  </div></footer>
+</body>
+</html>
