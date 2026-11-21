@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+  Résumé source (draft). Build with: node resume/build.js
+  - Clean draft:  resume/out/Yitong-Zheng-Resume-DRAFT.pdf   (no flags shown)
+  - Review copy:  resume/out/Yitong-Zheng-Resume-REVIEW.pdf  (numbered flags + change table)
+  The original assets/Yitong-Zheng-Resume.pdf is never modified by this build.
+  Elements with class "flag" carry data-n = row in the change table below.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yitong (Toby) Zheng · Résumé</title>
+<style>
+  @font-face{font-family:"Newsreader";src:url("../prototypes/fonts/newsreader-latin-opsz-normal.woff2") format("woff2");font-weight:200 800}
+  @font-face{font-family:"IBM Plex Sans";src:url("../prototypes/fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2");font-weight:400}
+  @font-face{font-family:"IBM Plex Sans";src:url("../prototypes/fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2");font-weight:600}
+  @page{size:letter;margin:0.42in 0.55in}
+  *{box-sizing:border-box}
+  body{margin:0;color:#13262a;font:400 9.6pt/1.32 "IBM Plex Sans",Arial,sans-serif}
+  h1{margin:0;text-align:center;font:500 20pt/1.1 "Newsreader",Georgia,serif;letter-spacing:-.01em}
+  .contact{margin:3px 0 8px;text-align:center;font-size:9pt}
+  h2{margin:7px 0 3px;padding-bottom:2px;border-bottom:1px solid #13262a;font:600 9.4pt/1.2 "IBM Plex Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase}
+  .row{display:flex;justify-content:space-between;gap:12px}
+  .org{font-weight:600}
+  .desc{font-weight:400;color:#4b5758}
+  .role{font-style:italic}
+  ul{margin:1px 0 3px;padding-left:15px}
+  li{margin:0 0 1px}
+  .entry{margin-bottom:3px;break-inside:avoid}
+  .skills{display:grid;grid-template-columns:1fr 1fr;column-gap:20px}
+  /* review-only */
+  .review-only{display:none}
+  body.review .review-only{display:block}
+  body.review .flag{background:#ffe9a8;border-radius:2px;box-decoration-break:clone}
+  body.review .flag::after{content:attr(data-n);margin-left:2px;padding:0 3px;border-radius:5px;background:#9a6a00;color:#fff;font:600 6.5pt/1.4 "IBM Plex Sans",sans-serif;vertical-align:super}
+  body.review .flag.new{background:#d9efe2}
+  body.review .flag.new::after{background:#1f6b45}
+  .review-only{page-break-before:always;font-size:9pt}
+  .review-only h2{margin-top:0}
+  .review-only p{margin:0 0 6px}
+  table{width:100%;border-collapse:collapse;font-size:8.4pt}
+  th,td{text-align:left;vertical-align:top;padding:4px 5px;border-bottom:1px solid #d8d1c4}
+  th{background:#f1ede5;font-weight:600}
+  td:first-child{width:22px;font-weight:600}
+  .k{display:inline-block;padding:0 4px;border-radius:3px;font-size:7.6pt;font-weight:600}
+  .k.c{background:#d9efe2;color:#1f6b45}.k.q{background:#ffe9a8;color:#6b4a00}.k.r{background:#f6d6cf;color:#8a2a17}
+</style>
+</head>
+<body>
+  <h1>Yitong (Toby) Zheng</h1>
+  <p class="contact">(801) 380-2948 &nbsp;|&nbsp; tobyzheng1202@gmail.com &nbsp;|&nbsp; linkedin.com/in/yitong-zheng- <span class="flag new" data-n="17">&nbsp;|&nbsp; yitongz.com</span></p>
+
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="row"><span class="org">Brigham Young University, Marriott School of Business</span><span>Provo, UT</span></div>
+    <div class="row"><span>Bachelor of Science in Global Supply Chain Management</span><span class="flag" data-n="1">Fall 2029 (expected)</span></div>
+    <ul>
+      <li>Relevant courses: Advanced Accounting, Operations Management, Purchasing, Logistics, Marketing Management</li>
+      <li><span class="flag" data-n="2">Awarded academic scholarship</span></li>
+      <li>Member of the Global Supply Chain Association, Delta Alpha Pi Honor Society, Finance Society</li>
+    </ul>
+  </div>
+
+  <h2>Skills</h2>
+  <div class="skills">
+    <ul><li>Advanced Excel (VBA, pivot tables, AI integration)</li><li>Programming: SQL, Python, Macros</li></ul>
+    <ul><li>Process improvement and optimization</li><li><span class="flag new" data-n="3">Languages: Chinese (native), English, Spanish (learning)</span></li></ul>
+  </div>
+
+  <h2>Experience</h2>
+  <div class="entry">
+    <div class="row"><span><span class="org">Caterpillar Inc.</span> <span class="desc">(global construction and mining equipment manufacturer)</span></span><span>Wuxi, Jiangsu, China</span></div>
+    <div class="row"><span class="role flag" data-n="5">Procurement Intern</span><span class="flag" data-n="6">May 2026 – Sep 2026</span></div>
+    <ul>
+      <li><span class="flag" data-n="7">Built should-cost analyses for cutting, machining, welding, and painting to identify supplier-rate anomalies</span></li>
+      <li><span class="flag new" data-n="8">Visited suppliers to understand cost-reduction opportunities and the cost models behind them</span></li>
+      <li><span class="flag new" data-n="9">Built 3 AI tools to support future should-cost analysis</span></li>
+      <li><span class="flag" data-n="10">Coordinated and developed 8 inspection-digitization pilots across two suppliers, including Bluetooth torque tools, laser measurement, and automated CMM reports</span></li>
+      <li><span class="flag" data-n="10">Developed a risk-based supplier audit framework integrating drawings, PPAP documents, and work instructions</span></li>
+      <li><span class="flag" data-n="11">Redesigned supplier safety-stock templates with automated checks and risk ratings to flag inventory coverage, lead-time, and data-quality issues</span></li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span><span class="org">Brigham Young University</span> <span class="desc flag" data-n="4">(34,000+ students, 180+ academic programs)</span></span><span>Provo, UT</span></div>
+    <div class="row"><span class="role">First-Year Experience Peer Mentor</span><span class="flag" data-n="12">Apr 2025 – Apr 2026</span></div>
+    <ul>
+      <li><span class="flag" data-n="12">Delivered presentations and one-on-one coaching to first-year students to improve academic performance and personal growth</span></li>
+      <li>Tracked student goals, follow-up actions, and progress in Salesforce to provide personalized support</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="org flag" data-n="13">Big Carp Technology Co., Ltd.</span><span>Wuxi, Jiangsu, China</span></div>
+    <div class="row"><span class="role flag" data-n="13">E-Commerce Operations Intern</span><span>Jun 2025 – Aug 2025</span></div>
+    <ul>
+      <li>Supported 15+ livestream sessions by coordinating equipment setup, production logistics, and on-site operation</li>
+      <li>Developed a project plan and go-to-market strategy for an AI-generated tourism video service and livestream offer</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span><span class="org">SWORN.ai</span> <span class="desc">(start-up enterprise, 8 health experts, 4 co-founders)</span></span><span>Provo, UT</span></div>
+    <div class="row"><span class="role">AI-Driven Industry Strategist</span><span>Sep 2024 – Dec 2024</span></div>
+    <ul>
+      <li>Mapped the healthcare technology ecosystem to identify 20+ suppliers, competitors, and potential partners</li>
+      <li><span class="flag" data-n="14">Developed social media content using AI-generated visuals</span></li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span><span class="org">RevRoad</span> <span class="desc">(9 years in operation, 50+ entrepreneurs served)</span></span><span>Provo, UT</span></div>
+    <div class="row"><span class="role flag" data-n="15">Business Analyst Intern</span><span class="flag" data-n="15">Aug 2022 – Jan 2023</span></div>
+    <ul>
+      <li>Conducted industry and competitor analysis to identify market-entry opportunities and supply-side challenges</li>
+      <li>Advised 3+ entrepreneurs on go-to-market strategy, resource allocation, and value-chain positioning</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span><span class="org">Harvard College Association for US-China Relations</span> <span class="desc">(6 annual conferences, 10,000+ students)</span></span><span>Shanghai, China</span></div>
+    <div class="row"><span class="role">Student Ambassador / Internship Supervisor</span><span>Sep 2021 – Sep 2022</span></div>
+    <ul>
+      <li>Supervised two teams of five student interns, coordinating meetings, project timelines, and deliverables</li>
+      <li>Produced and presented a 30+ page strategy and competitive-analysis report focused on a Tencent Harvard case</li>
+    </ul>
+  </div>
+
+  <div class="flag new" data-n="16">
+  <h2>Service</h2>
+  <div class="entry">
+    <div class="row"><span class="org">The Church of Jesus Christ of Latter-day Saints</span><span>Houston, TX</span></div>
+    <div class="row"><span class="role">Full-time volunteer missionary (Mandarin-speaking)</span><span>Dec 2026 – Dec 2028 (planned)</span></div>
+  </div>
+  </div>
+
+  <h2>Personal</h2>
+  <ul>
+    <li>Third Place, DECA Regional Business Competition; 5th Place, Vivint Inventory Case Competition</li>
+    <li>Interests: global backpacking, basketball, and the Portland Trail Blazers</li>
+  </ul>
+
+  <section class="review-only">
+    <h2>Review copy: proposed changes (one list)</h2>
+    <p>Original file <b>assets/Yitong-Zheng-Resume.pdf</b> is unchanged. Yellow = from your original résumé or site, still awaiting your confirmation. Green = new wording based on facts you confirmed, or a proposed addition. Nothing here was invented; where sources conflict, the original résumé value is kept and flagged.</p>
+    <table>
+      <tr><th>#</th><th>Original résumé</th><th>Proposed draft</th><th>Why / status</th></tr>
+      <tr><td>1</td><td>Apr 2027</td><td>Fall 2029 (expected)</td><td><span class="k c">Confirmed</span> Mission Dec 2026 – Dec 2028; keep “expected.”</td></tr>
+      <tr><td>2</td><td>“Awarded academic scholarship covering over 100 % of tuition”</td><td>“Awarded academic scholarship”</td><td><span class="k r">Removed %</span> Unverified percentage; an earlier résumé said “over 65%.” Tell me the correct figure if you want it back.</td></tr>
+      <tr><td>3</td><td>“Fluent in Chinese – Native”</td><td>“Languages: Chinese (native), English, Spanish (learning)”</td><td><span class="k c">Confirmed</span> Spanish (learning) confirmed.</td></tr>
+      <tr><td>4</td><td>“(34,000+ students, $2B+ annual budget, 180+ academic programs)”</td><td>“(34,000+ students, 180+ academic programs)”</td><td><span class="k r">Removed $</span> Unverified financial figure.</td></tr>
+      <tr><td>5</td><td>Procurement Intern</td><td>Procurement Intern (unchanged)</td><td><span class="k q">Confirm</span> Check against your official record; your old site said “Procurement Analyst Intern.”</td></tr>
+      <tr><td>6</td><td>May 2026 – Present</td><td>May 2026 – Sep 2026</td><td><span class="k q">Confirm</span> “Present” is outdated; Sep 2026 comes from your old site. Confirm the end month.</td></tr>
+      <tr><td>7</td><td>“…to identify supplier rate anomalies and $10M+ cost reduction opportunities, designed 3+ AI agents increased 50% efficiency and accuracy”</td><td>“Built should-cost analyses for cutting, machining, welding, and painting to identify supplier-rate anomalies”</td><td><span class="k r">Removed $ and %</span> $10M+ and 50% unverified. <span class="k q">Confirm</span> processes and anomalies wording.</td></tr>
+      <tr><td>8</td><td>(none)</td><td>“Visited suppliers to understand cost-reduction opportunities and the cost models behind them”</td><td><span class="k c">Confirmed</span> Your own description.</td></tr>
+      <tr><td>9</td><td>“designed 3+ AI agents”</td><td>“Built 3 AI tools to support future should-cost analysis”</td><td><span class="k c">Confirmed</span> You said “AI tools,” you built 3, for future should-cost analysis.</td></tr>
+      <tr><td>10</td><td>Pilots and audit-framework bullets</td><td>Unchanged</td><td><span class="k q">Confirm</span> 8 pilots / 2 suppliers / tools tested; “coordinated and developed” as your role; audit framework.</td></tr>
+      <tr><td>11</td><td>“…formulated full automated process and increased 40% efficiency”</td><td>Ends at “…data-quality issues”</td><td><span class="k r">Removed %</span> 40% unverified. <span class="k q">Confirm</span> the rest.</td></tr>
+      <tr><td>12</td><td>Apr 2025 – Apr 2026; “1:1 coaching to 70+ students”</td><td>Dates unchanged; “to first-year students” (count removed)</td><td><span class="k q">Confirm</span> Site said through May 2026 and “two UNIV 101 classes of 50+.” Count removed until confirmed.</td></tr>
+      <tr><td>13</td><td>“Big Carp Technology Co, Ltd. (1M+ annual revenue, 120+ customers, regional industry leader)” · E-Commerce Operations Intern</td><td>Descriptor removed · title unchanged</td><td><span class="k r">Removed $</span> Unverified revenue/customer claims. <span class="k q">Confirm</span> title (site said “Operations Intern”).</td></tr>
+      <tr><td>14</td><td>“Increased social media engagement by 85% through optimized content development and AI-generated visuals”</td><td>“Developed social media content using AI-generated visuals”</td><td><span class="k r">Removed %</span> 85% unverified (site said 90%).</td></tr>
+      <tr><td>15</td><td>Business Analyst Intern · Aug 2022 – Jan 2023</td><td>Unchanged</td><td><span class="k q">Confirm</span> Site said “Student Intern,” Sep–Dec 2022.</td></tr>
+      <tr><td>16</td><td>(none)</td><td>Service: full-time volunteer missionary (Mandarin-speaking), Houston, Dec 2026 – Dec 2028 (planned)</td><td><span class="k c">Confirmed facts</span> Proposed addition; explains your availability. Your call whether to include it.</td></tr>
+      <tr><td>17</td><td>(none)</td><td>yitongz.com in the header</td><td>Proposed addition. Your call.</td></tr>
+      <tr><td>18</td><td>(not on résumé)</td><td>Not added</td><td><span class="k q">Your call</span> BYU Marriott Research Assistant (on your old site, Sep 2026). Not added until you confirm title, dates and duties.</td></tr>
+    </table>
+    <p style="margin-top:8px">Kept from the original without change (no flag): course list, memberships, skills, Big Carp bullets, SWORN.ai ecosystem bullet, RevRoad and HCAUSCR entries, awards, interests. Tell me if any of these are wrong.</p>
+  </section>
+</body>
+</html>

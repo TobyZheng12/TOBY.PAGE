@@ -5,6 +5,7 @@ Personal portfolio for Yitong (Toby) Zheng, served at https://yitongz.com/ by Gi
 - **Stack:** plain HTML, CSS and JS with no build step. Main page `index.html`, styles `css/styles.css`, behavior `js/scripts.js`.
 - **Preview:** `python3 -m http.server 8000` from the repo root. Check at 1440px and 375px wide, in light and dark themes.
 - **Prototype B:** `prototypes/b/` (`style.css`, `index.html`); regenerate `opening-alt.html`, `review.html` and previews with `python3 prototypes/build_previews.py [OUT_DIR]`.
+- **Résumé draft:** `resume/resume.html`; build draft + review PDFs with `node resume/build.js OUT_DIR`. Never overwrite `assets/Yitong-Zheng-Resume.pdf` until Toby approves the draft.
 - **Brief:** read `docs/brief.md` before changing any copy. It holds the audience, the story, the **approved facts**, the résumé discrepancy checklist and the success criteria.
 
 ## Rules
@@ -16,3 +17,4 @@ Personal portfolio for Yitong (Toby) Zheng, served at https://yitongz.com/ by Gi
 - Keep headline results visible without hover or a click. Use `<details>` for optional depth.
 - Removing files (e.g. `archive/`) or changing the public résumé or contact details is a separate decision: propose it first.
 - Update `sitemap.xml` `lastmod` when changing public pages.
+- Deployment ships production files only: never review pages, `prototypes/`, `resume/` sources, `docs/` notes or confirmation highlights. Push or deploy only with Toby’s explicit authorization.
