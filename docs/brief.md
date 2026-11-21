@@ -41,9 +41,10 @@ Three tiers. Only **3a** is approved for public copy as-is. **3b** may appear in
 | Caterpillar: AI tools | **Built 3 AI tools** to help with future should-cost analysis; gave the team a new perspective on AI. Say "AI tools", not "agents" |
 | CoffeeChat AI | Grew from his own difficulty preparing for networking conversations in a second language. Helps him prepare questions, keep a networking list, and get follow-up advice and reminders. Built for himself. No user or usage claims |
 | CoffeeChat lesson | Learned to prioritize useful questions instead of generating more of them; short-call plans and “must ask” tags help him focus on what matters when time is limited |
+| Books | Books I’d love to talk about: The Goal; How to Win Friends and Influence People; Supercommunicators; Thinking, Fast and Slow. More: How to Stop Worrying and Start Living; Take Command; Getting to Yes (no link given yet). Invitation: “Read any of these? I’d love to compare notes.” |
 | Mentoring | Loves mentoring and getting mentored. As a BYU First-Year Experience peer mentor, learned to listen, talk with and motivate others, and practiced his English. A professor he worked with in UNIV 101 inspired his faith and personal goals and his decision to serve a mission (keep the professor unnamed) |
 | CliftonStrengths | Top five: Relator, Harmony, Deliberative, Restorative, Adaptability. Taken freshman year in an Authentic Leadership class; helps him understand his strengths and what to work on |
-| Faith journey | Came to the U.S. for high school; chose BYU after a campus tour and for its reputation and programs; was afraid of religion at first and did not accept the message in a high-school class; after experiences and people at BYU, decided to join the Church. **Exact public wording still needs approval** |
+| Faith journey | Use Toby’s wording verbatim: “I came to the U.S. for high school and chose BYU after a campus tour. I was afraid of religion at first, but my experiences and the people I met at BYU led me to join The Church of Jesus Christ of Latter-day Saints. Choosing to serve a mission was a difficult and personal decision.” |
 
 ### 3b. From Toby's own résumé or current site, awaiting confirmation
 
@@ -64,6 +65,7 @@ Three tiers. Only **3a** is approved for public copy as-is. **3b** may appear in
 
 - **$550K+** until its scope is confirmed (confirmed so far: converted to USD). Still needed: identified, validated or realized; one-time or annual; Toby's share.
 - **$10M+**, the **50%** and **40%** figures, the SWORN **90%/85%** figure.
+- The should-cost illustration must stay labeled as a schematic example (“Example process costs”), never as Toby’s own analysis or a savings result, until he confirms the related experience.
 - CELS / Sandbox / PengPal until Toby approves wording that describes his actual involvement.
 - Supplier names, internal specifications, tools, data or screenshots from any employer.
 - Quotes from anyone without Toby's explicit approval of that exact quote.

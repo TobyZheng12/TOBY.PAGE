@@ -252,6 +252,15 @@ a.zoom:hover .zoom-badge,a.zoom:focus-visible .zoom-badge{background:#fff;color:
 .path-cols{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:32px}
 .path-story{grid-column:1/span 5}
 .path-story .outside{margin-bottom:20px;color:var(--graphite)}
+.books{margin:4px 0 26px}
+.books-h{font:400 1.35rem/1.2 var(--serif);margin-bottom:8px}
+.books ul{display:grid;gap:5px;margin-bottom:10px}
+.books li{color:var(--graphite);font-size:.97rem}
+.books cite{font-style:normal}
+.books li a{color:var(--ink);font-weight:500}
+.books-more{font-size:.92rem;color:var(--graphite);margin-bottom:10px}
+.books-more a{color:var(--ink)}
+.books-invite{font:italic 400 1.1rem/1.4 var(--serif);color:var(--seal)}
 .path-story details{margin-top:0}
 .xp{grid-column:7/span 6}
 .xp h3{margin-bottom:10px}
