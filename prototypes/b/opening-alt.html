@@ -38,9 +38,9 @@
       .ha-text{display:flex;flex-direction:column;justify-content:center;padding:clamp(32px,5vw,72px) var(--gutter) clamp(32px,4vw,48px) clamp(32px,5vw,80px)}
       .ha-text h1{font:400 clamp(2.4rem,4.4vw,3.9rem)/1.02 var(--serif);letter-spacing:-.02em;font-variation-settings:"opsz" 72;margin:14px 0 20px}
       .ha-text .lede{max-width:36ch}
-      .ha-text .spec{grid-template-columns:1fr 1fr;max-width:620px}
-      .ha-text .spec div:nth-child(odd){padding-left:0;border-left:0}
-      .ha-text .spec div:nth-child(n+3){border-top:1px solid var(--rule)}
+      .ha-text .glance{grid-template-columns:1fr 1fr;max-width:620px}
+      .ha-text .glance div:nth-child(odd){padding-left:0;border-left:0}
+      .ha-text .glance div:nth-child(n+3){border-top:1px solid var(--rule)}
       @media (max-width:860px){
         .ha-grid{grid-template-columns:1fr;min-height:0}
         .ha-photo{aspect-ratio:16/11}
@@ -49,7 +49,7 @@
         .ha-text{padding:22px var(--gutter) 40px}
         .ha-text h1{font-size:2.3rem;margin:8px 0 14px}
         .ha-text .lede{margin-bottom:22px}
-        .ha-text .spec{margin-top:28px;grid-template-columns:1fr}.ha-text .spec div,.ha-text .spec div+div{display:grid;grid-template-columns:minmax(0,38%) 1fr;gap:12px;padding:11px 0;border-left:0;border-top:1px solid var(--rule)}.ha-text .spec div:first-child{border-top:0}.ha-text .btn{flex:1 1 100%;justify-content:center}.ha-text .actions{gap:4px 22px}
+        .ha-text .glance{margin-top:28px;grid-template-columns:1fr}.ha-text .glance div,.ha-text .glance div+div{display:grid;grid-template-columns:minmax(0,38%) 1fr;gap:12px;padding:11px 0;border-left:0;border-top:1px solid var(--rule)}.ha-text .glance div:first-child{border-top:0}.ha-text .btn{flex:1 1 100%;justify-content:center}.ha-text .actions{gap:4px 22px}
       }
     </style>
     <section class="hero-alt" id="top" aria-labelledby="name">
@@ -58,19 +58,16 @@
           <img src="../../assets/img/toby-zheng-portrait.webp" alt="Toby Zheng smiling, in a navy suit and glasses" width="760" height="1068" fetchpriority="high">
         </figure>
         <div class="ha-text">
-          <p class="label">BYU Marriott School of Business</p>
           <h1 id="name">Yitong (Toby) Zheng</h1>
-          <p class="lede">I’m a Global Supply Chain Management student at BYU, preparing for a career in procurement. I learn by asking good questions and building practical tools.</p>
+          <p class="lede">I’m a BYU Global Supply Chain Management student preparing for a career in procurement. I learn by asking good questions and building practical tools.</p>
           <div class="actions">
             <a class="btn" href="#work">See my work <span class="arr" aria-hidden="true">↓</span></a>
             <a class="tlink" href="../../assets/Yitong-Zheng-Resume.pdf">Résumé (PDF)</a>
             <a class="tlink" href="https://www.linkedin.com/in/yitong-zheng-/">LinkedIn</a>
           </div>
-          <dl class="spec" aria-label="At a glance">
-            <div><dt class="label">Languages</dt><dd>Mandarin, English, Spanish (learning)</dd></div>
-            <div><dt class="label">Most recent</dt><dd>Procurement Intern, Caterpillar (Wuxi, China)</dd></div>
-            <div><dt class="label">Mission</dt><dd>Houston, Dec 2026 – Dec 2028</dd></div>
-            <div><dt class="label">Graduation</dt><dd>Fall 2029 (expected)</dd></div>
+          <dl class="glance" aria-label="At a glance">
+            <div><dt>Procurement experience</dt><dd>Procurement Intern at Caterpillar in Wuxi, China (2026): supplier visits and should-cost analysis</dd></div>
+            <div><dt>Availability</dt><dd>Mission in Houston, Dec 2026 – Dec 2028 · BYU graduation, Fall 2029</dd></div>
           </dl>
         </div>
       </div>
@@ -78,15 +75,15 @@
 <!-- HERO:END -->
 
     <section class="sec" id="work" aria-labelledby="cat-h"><div class="wrap">
-      <div class="sec-head"><p class="label"><span class="n">01</span> &nbsp;Caterpillar · Summer 2026</p></div>
+      <div class="sec-head"><p class="label">Caterpillar · Summer 2026</p></div>
       <div class="feature">
         <div class="feature-text">
           <h2 id="cat-h">Learning what a part should cost</h2>
           <p class="intro">My first time working in a corporate environment. I learned to ask good questions, communicate with confidence, and build good relationships.</p>
           <ol class="steps">
-            <li><span class="k">01</span><div><b>Go see</b><p>I visited suppliers to understand how cost-reduction opportunities work.</p></div></li>
-            <li><span class="k">02</span><div><b>Analyze</b><p>I built should-cost analyses for cutting, machining, welding and painting, which helped identify supplier-rate anomalies.</p></div></li>
-            <li><span class="k">03</span><div><b>Make it reusable</b><p>I built three AI tools to help with future should-cost analysis. They gave my team a new perspective on using AI.</p></div></li>
+            <li><b>Go see</b><p>I visited suppliers to understand how cost-reduction opportunities work.</p></li>
+            <li><b>Analyze</b><p>I built should-cost analyses for cutting, machining, welding and painting, which helped identify supplier-rate anomalies.</p></li>
+            <li><b>Make it reusable</b><p>I built three AI tools to help with future should-cost analysis. They gave my team a new perspective on using AI.</p></li>
           </ol>
           <details>
             <summary><span class="pm" aria-hidden="true"></span>What else I worked on</summary>
@@ -138,7 +135,7 @@
     </div></section>
 
     <section class="sec" aria-labelledby="cc-h" style="padding-top:0"><div class="wrap">
-      <div class="sec-head"><p class="label"><span class="n">02</span> &nbsp;Personal project</p></div>
+      <div class="sec-head"><p class="label">Personal project</p></div>
       <div class="project">
         <div class="project-intro">
           <h2 id="cc-h">CoffeeChat AI</h2>
@@ -155,16 +152,16 @@
         <figure class="shot shot-main">
           <a class="zoom" href="../img/coffeechat-plan-full.webp" data-w="1455" data-h="721" data-caption="CoffeeChat AI public demo: full conversation-plan screen. Fictional demo data." aria-label="Enlarge screenshot: CoffeeChat AI conversation plan (fictional demo data)">
           <picture>
-            <source media="(max-width:620px)" srcset="../img/coffeechat-plan-questions.webp" width="388" height="194">
+            <source media="(max-width:620px)" srcset="../img/coffeechat-plan-full.webp" width="1455" height="721">
             <img src="../img/coffeechat-plan.webp" width="1114" height="700" loading="lazy" alt="CoffeeChat AI demo screen: a 30-minute conversation plan for a fictional contact, with an opening line, three goals, six prioritized questions and closing guidance.">
-          </picture><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9"/></svg>Enlarge</span></a>
-          <figcaption><span class="label">Public demo</span> A conversation plan prepared before a coffee chat. <span class="nowrap">All people, companies and details are fictional demo data.</span></figcaption>
+          </picture><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9"/></svg></span></a>
+          <figcaption><span class="label">Public demo</span> A conversation plan prepared before a coffee chat. <span class="nowrap">All people, companies and details are fictional demo data.</span> <span class="hint">Select the image to see it full screen.</span></figcaption>
         </figure>
         <details class="project-more">
           <summary><span class="pm" aria-hidden="true"></span>See the follow-up view, and how it’s built</summary>
           <div class="dbody">
             <figure class="shot">
-              <a class="zoom" href="../img/coffeechat-followups-full.webp" data-w="1455" data-h="721" data-caption="CoffeeChat AI public demo: full follow-ups screen. Fictional demo data." aria-label="Enlarge screenshot: CoffeeChat AI follow-ups (fictional demo data)"><img src="../img/coffeechat-followups.webp" width="1114" height="425" loading="lazy" alt="CoffeeChat AI demo follow-ups screen: a suggested follow-up for a fictional contact, with the reason for the suggestion and a message angle."><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9"/></svg>Enlarge</span></a>
+              <a class="zoom" href="../img/coffeechat-followups-full.webp" data-w="1455" data-h="721" data-caption="CoffeeChat AI public demo: full follow-ups screen. Fictional demo data." aria-label="Enlarge screenshot: CoffeeChat AI follow-ups (fictional demo data)"><img src="../img/coffeechat-followups.webp" width="1114" height="425" loading="lazy" alt="CoffeeChat AI demo follow-ups screen: a suggested follow-up for a fictional contact, with the reason for the suggestion and a message angle."><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9"/></svg></span></a>
               <figcaption>Follow-up suggestions, each with a reason. Fictional demo data.</figcaption>
             </figure>
             <p>Next.js, TypeScript and Supabase, built with Claude Code.</p>
@@ -179,7 +176,7 @@
           <figure class="shot shot-small">
             <a class="zoom" href="../img/scripture-primer-full.webp" data-w="1455" data-h="665" data-caption="Scripture Story Primer: full story screen for “The Call of Abraham.”" aria-label="Enlarge screenshot: Scripture Story Primer story screen">
             <picture><source media="(max-width:620px)" srcset="../img/scripture-primer-mobile.webp" width="752" height="306">
-            <img src="../img/scripture-primer-story.webp" width="780" height="375" loading="lazy" alt="Scripture Story Primer screen for “The Call of Abraham,” showing the Chinese title and a one-line summary of the story."></picture><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9"/></svg>Enlarge</span></a>
+            <img src="../img/scripture-primer-story.webp" width="780" height="375" loading="lazy" alt="Scripture Story Primer screen for “The Call of Abraham,” showing the Chinese title and a one-line summary of the story."></picture><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9"/></svg></span></a>
           </figure>
         </div>
       </div>
@@ -187,7 +184,7 @@
 
     <section class="sec band" aria-labelledby="people-h"><div class="wrap">
       <div class="people">
-        <p class="label" id="people-h"><span class="n">03</span> &nbsp;Mentoring</p>
+        <p class="label" id="people-h">Mentoring</p>
         <blockquote>I love mentoring, <em>and getting mentored.</em></blockquote>
         <div class="body">
           <p>As a BYU First-Year Experience peer mentor, I learned how to listen to, talk with and motivate others, and I practiced my English along the way.</p>
@@ -204,19 +201,19 @@
     </div></section>
 
     <section class="sec" id="path" aria-labelledby="path-h"><div class="wrap">
-      <div class="sec-head"><p class="label"><span class="n">04</span> &nbsp;About</p></div>
+      <div class="sec-head"><p class="label">About</p></div>
       <h2 id="path-h" style="margin-bottom:clamp(28px,4vw,44px)">My path</h2>
       <ol class="route">
-        <li><span class="place">China</span><span class="when label">Childhood</span></li>
-        <li><span class="place">United States</span><span class="when label">High school</span></li>
-        <li><span class="place">BYU</span><span class="when label">Provo, Utah</span><span class="what">Global Supply Chain Management</span></li>
-        <li><span class="place">Wuxi, China</span><span class="when label">2026</span><span class="what">Procurement Intern, Caterpillar</span></li>
-        <li class="next"><span class="place">Houston</span><span class="when label">Dec 2026 – Dec 2028</span><span class="what">Mandarin-speaking mission</span></li>
-        <li class="next"><span class="place">BYU</span><span class="when label">Fall 2029</span><span class="what">Expected graduation</span></li>
+        <li><span class="place">China</span><span class="when mono">Childhood</span></li>
+        <li><span class="place">United States</span><span class="when mono">High school</span></li>
+        <li><span class="place">BYU</span><span class="when mono">Provo, Utah</span><span class="what">Global Supply Chain Management</span></li>
+        <li><span class="place">Wuxi, China</span><span class="when mono">2026</span><span class="what">Procurement Intern, Caterpillar</span></li>
+        <li class="next"><span class="place">Houston</span><span class="when mono">Dec 2026 – Dec 2028</span><span class="what">Mandarin-speaking mission</span></li>
+        <li class="next"><span class="place">BYU</span><span class="when mono">Fall 2029</span><span class="what">Expected graduation</span></li>
       </ol>
       <div class="path-cols">
         <div class="path-story">
-          <p class="outside">Outside work, I like trying new sports, traveling, and learning cultures through their food.</p>
+          <p class="outside">I speak Mandarin and English, and I’m learning Spanish. Outside work, I like trying new sports, traveling, and learning cultures through their food.</p>
           <details>
             <summary><span class="pm" aria-hidden="true"></span>Why BYU, and why a mission</summary>
             <div class="dbody">
@@ -226,7 +223,7 @@
           </details>
         </div>
         <div class="xp">
-          <h3 class="label">Experience</h3>
+          <h3 class="xp-h">Experience</h3>
           <ul>
             <li><time>2026</time><span><span class="org">Caterpillar</span> · Procurement Intern</span></li>
             <li><time>2026</time><span><span class="org">BYU Marriott</span> · Research Assistant</span></li>
@@ -248,6 +245,7 @@
       <div><p class="label">Anytime</p><p><a href="https://www.linkedin.com/in/yitong-zheng-/">LinkedIn</a><br><a href="mailto:tobyzheng1202@gmail.com">tobyzheng1202@gmail.com</a> (limited access during my mission)</p></div>
       <div><p class="label">Résumé</p><p><a href="../../assets/Yitong-Zheng-Resume.pdf">Download PDF</a></p></div>
     </div>
+    <p class="signoff">Proud BYU Cougar. Go Cougs! <span role="img" aria-label="shaka hand sign">🤙</span></p>
     <p class="fine">© Toby Zheng · Provo, Utah</p>
   </div></footer>
 
