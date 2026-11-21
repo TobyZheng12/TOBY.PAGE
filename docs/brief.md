@@ -11,17 +11,11 @@ Last updated: 2026-11-21. This repository is public: everything here, including 
 ## 2. Positioning and story
 
 - **Direction:** procurement and supply chain, with consulting as a possibility. AI, building products and entrepreneurship explain *how* Toby works and what he is learning. They are not the job title.
-- **Status:** a student. Never imply a professional title Toby doesn't hold (e.g. "Procurement analyst").
+- **Identity first:** the opening states name, BYU supply chain student status and procurement direction. The tagline "I ask good questions, then build what's missing" supports it; it doesn't replace it.
+- **Status:** a student. Never imply a professional title Toby doesn't hold.
 - **Story pattern (shown through examples, not stated as a slogan):** notices a problem → asks questions and listens → builds something useful → learns from feedback.
 - **The human thread:** grew up in China, came to the U.S. for high school, chose BYU, works and learns in a second language. That is why asking good questions and building relationships matter so much to him.
-- **CliftonStrengths top five** (taken freshman year, Authentic Leadership class):
-  1. Relator
-  2. Harmony
-  3. Deliberative
-  4. Restorative
-  5. Adaptability
-
-  Use them as a lens on how he works, each tied to a real example.
+- **Strengths show through actions, not labels.** CliftonStrengths appear only as optional detail.
 
 ### Headline options (student status kept clear)
 
@@ -29,38 +23,50 @@ Last updated: 2026-11-21. This repository is public: everything here, including 
 2. "Learning procurement by doing it: asking good questions, building useful tools, and working closely with people."
 3. "BYU supply chain student focused on procurement, who learns by building."
 
-## 3. Approved facts
+## 3. Facts
 
-Only these may appear in public copy. "Opportunities identified", "validated savings" and "realized savings" are different claims and must never be blurred.
+Three tiers. Only **3a** is approved for public copy as-is. **3b** may appear in review prototypes but must be confirmed before launch. **3c** stays out.
 
-| Claim | Approved public wording / limits | Source |
-|---|---|---|
-| Education | BYU Marriott School, B.S. Global Supply Chain Management, **expected graduation Fall 2029** | Toby, Nov 2026 |
-| Mission | Full-time missionary, The Church of Jesus Christ of Latter-day Saints, Houston, Texas, **Mandarin-speaking**, **Dec 30, 2026 – Dec 2028 (expected return)** | Toby |
-| Spanish | Learning Spanish (many missionaries in his mission serve in Spanish) | Toby |
-| Languages | Mandarin (native), English (professional), Spanish (learning) | Site, Toby |
-| Caterpillar role | Procurement intern, Caterpillar's China R&D Center (Wuxi), summer 2026. Exact title and end date: see checklist | Résumé, site |
-| **$550K+** | "Should-cost analyses that surfaced **$550K+ in cost-reduction opportunities identified** (converted to USD)." Do **not** call it savings, annual or realized | Toby |
-| Should-cost scope | Cutting, machining, welding and painting; flagged supplier-rate anomalies; visited suppliers to understand cost drivers; learned cost models, Excel and AI-assisted analysis | Résumé, Toby |
-| AI agents | Built AI agents to support future should-cost analysis and show the team a new way to use AI. **No count or % until confirmed** | Toby |
-| Inspection pilots | Coordinated **8 inspection-digitization pilots across 2 suppliers** (e.g. Bluetooth torque tools, laser measurement, automated CMM reports). Role: recommended pilots to suppliers, tracked progress and helped judge which were worth scaling. **No supplier names** | Résumé, Toby |
-| Supplier audit | Developed a risk-based supplier audit framework connecting drawings, PPAP documents and work instructions | Résumé, site |
-| Safety stock | Redesigned supplier safety-stock templates with automated checks and risk ratings (coverage, lead time, data quality). **No %** | Résumé, site |
-| Peer mentor | BYU First-Year Experience peer mentor: presentations and one-on-one coaching for first-year students; tracked goals in Salesforce. **No student count until confirmed** | Résumé, site |
-| CoffeeChat AI | Personal tool built to solve his own problem: preparing the best questions, keeping a list of people to network with, and follow-up advice and reminders. Built with Next.js, TypeScript, Supabase and Claude Code. **No user or usage claims** | Toby, site |
-| Scripture Primer | Live bilingual (Chinese/English) learning site; built to learn the stories before teaching them | Site |
-| CELS / Sandbox | BYU entrepreneurship program, Fall 2026. Describe it as **coursework / a learning project** (the PengPal concept: helping travelers to China who can't use local apps or the language connect with a local friend). Not a business, not "founder" | Toby |
-| Research assistant | BYU Marriott research assistant, Fall 2026 (literature reviews, data analysis, call-transcript analysis) | Site |
-| Faith journey | Came to the U.S. for high school; chose BYU after a campus tour; was wary of religion at first; joined the Church at BYU; decided to serve a mission. Keep it short and in Toby's voice | Toby |
+### 3a. Confirmed by Toby in this session
 
-### Do not publish (unverified or private)
+| Claim | Wording / limits |
+|---|---|
+| Education | BYU, B.S. Global Supply Chain Management, **expected graduation Fall 2029** |
+| Mission | Full-time missionary, Houston, Texas, **Mandarin-speaking**, **Dec 2026 – Dec 2028 (expected return)** |
+| Spanish | Learning Spanish; many missionaries in his mission serve in Spanish |
+| Mission-time contact | Missionary email and Facebook |
+| Caterpillar: learning | First time working in a corporate environment; learned to ask good questions, communicate with confidence, build good relationships and learn from others |
+| Caterpillar: supplier visits | Visited suppliers to understand how cost-reduction opportunities work |
+| Caterpillar: skills | Learned cost models and how to use Excel and AI tools for data analysis |
+| Caterpillar: AI tools | **Built 3 AI tools** to help with future should-cost analysis; gave the team a new perspective on AI. Say "AI tools", not "agents" |
+| CoffeeChat AI | Grew from his own difficulty preparing for networking conversations in a second language. Helps him prepare questions, keep a networking list, and get follow-up advice and reminders. Built for himself. No user or usage claims |
+| Mentoring | Loves mentoring and getting mentored. As a BYU First-Year Experience peer mentor, learned to listen, talk with and motivate others, and practiced his English. A professor he worked with in UNIV 101 inspired his faith and personal goals and his decision to serve a mission (keep the professor unnamed) |
+| CliftonStrengths | Top five: Relator, Harmony, Deliberative, Restorative, Adaptability. Taken freshman year in an Authentic Leadership class; helps him understand his strengths and what to work on |
+| Faith journey | Came to the U.S. for high school; chose BYU after a campus tour and for its reputation and programs; was afraid of religion at first and did not accept the message in a high-school class; after experiences and people at BYU, decided to join the Church. **Exact public wording still needs approval** |
 
-- **$10M+** (still on the résumé PDF). Its source is unknown.
-- **50% and 40%** efficiency/accuracy figures. What they measured is unknown.
-- **90% / 85%** SWORN engagement figure (sources conflict).
-- Supplier names, internal specification numbers, internal tools or data, screenshots of employer files.
-- Quotes from anyone unless Toby explicitly approves that exact quote for public use.
-- Private details from networking conversations.
+### 3b. From Toby's own résumé or current site, awaiting confirmation
+
+| Claim | Source |
+|---|---|
+| Caterpillar title "Procurement Intern" (provisional; confirm against official record) and "Summer 2026" | Résumé |
+| Should-cost analyses for cutting, machining, welding and painting to identify supplier-rate anomalies | Résumé |
+| Coordinated **8 inspection-digitization pilots across 2 suppliers**, including Bluetooth torque tools, laser measurement and automated CMM reports. Toby's exact role and the pilots' outcomes are unconfirmed. Never imply a system Toby built or deployed at scale | Résumé |
+| Risk-based supplier audit framework (drawings, PPAP documents, work instructions) | Résumé, site |
+| Redesigned supplier safety-stock templates with automated checks and risk ratings | Résumé, site |
+| Peer mentor: presentations, one-on-one coaching, goals tracked in Salesforce | Résumé |
+| Scripture Primer: live bilingual (Chinese/English) site for learning scripture stories | Site |
+| BYU Marriott research assistant | Site |
+| Other roles (Big Carp, SWORN.ai, RevRoad, HCAUSCR, Dale Carnegie) | Résumé, site |
+| Interests: new sports, travel, food, basketball, Portland Trail Blazers | Résumé, site |
+
+### 3c. Do not publish
+
+- **$550K+** until its scope is confirmed (confirmed so far: converted to USD). Still needed: identified, validated or realized; one-time or annual; Toby's share.
+- **$10M+**, the **50%** and **40%** figures, the SWORN **90%/85%** figure.
+- CELS / Sandbox / PengPal until Toby approves wording that describes his actual involvement.
+- Supplier names, internal specifications, tools, data or screenshots from any employer.
+- Quotes from anyone without Toby's explicit approval of that exact quote.
+- Details from private networking conversations, and private personal status details.
 
 ## 4. Résumé ↔ site discrepancy checklist
 
@@ -83,7 +89,7 @@ The current public site and the résumé PDF it links to disagree. Resolve each 
 
 1. **First screen (desktop and phone):** name, student status, direction, a one-line availability note, and visible proof (the result itself, not a button to see it).
 2. **Three or four strong examples** with the headline result always visible and the "how" in optional detail: Caterpillar cost analysis, supplier digitization pilots, CoffeeChat AI, and mentoring/people.
-3. **How I work:** CliftonStrengths tied to evidence, plus a short personal story.
+3. **People and growth:** mentoring and a short personal story, with detail in expanders.
 4. **Compact background:** one line per role. The résumé holds the detail.
 5. **Availability and contact:** clear, factual and dated, never "career on pause."
 
@@ -101,8 +107,8 @@ The current public site and the résumé PDF it links to disagree. Resolve each 
 ## 7. Success criteria
 
 - A recruiter can answer "who is this, what has he done, when is he available, how do I reach him" in **under 10 seconds** on a phone.
-- Main page text is **≤ 350 words visible by default** (baseline: ~1,230), with detail available on demand.
-- Every number on the site appears in §3 with matching wording, and matches the résumé PDF.
+- Main page text is **300–350 words visible by default** (baseline: ~1,230), with detail available on demand.
+- Every claim on the launched site appears in §3a with matching wording, and matches the résumé PDF.
 - The page still reads accurately in December 2028 with no edits.
 - At least two concrete stories show listening, working with people and learning from feedback, not just analysis.
 - Passes a basic accessibility check: headings, contrast, keyboard use, alt text, no hover-only content.
@@ -119,4 +125,4 @@ The current public site and the résumé PDF it links to disagree. Resolve each 
 
 ## 9. Prototypes
 
-`prototypes/a/` and `prototypes/b/` are review-only (`noindex`). They should not be linked from the live site. See each file's header comment for its intent.
+`prototypes/a/` and `prototypes/b/` are review-only (`noindex`) and not linked from the live site. **Direction chosen: B**, with A's compact role list. The first versions (commit ac00948) contain draft lines Toby has not approved; the refined B supersedes them.
