@@ -75,6 +75,8 @@ a:hover{text-decoration-color:var(--seal);text-decoration-thickness:2px}
 .hero-text{grid-column:1/span 7}
 .hero-figure{grid-column:9/span 4}
 .hero h1{font:400 clamp(2.4rem,4.6vw,4rem)/1.02 var(--serif);letter-spacing:-.02em;font-variation-settings:"opsz" 72;margin:14px 0 22px}
+.hero h1 .zh{display:block;margin-top:10px;font:400 .42em/1.2 "Songti SC","Noto Serif SC","Source Han Serif SC",var(--serif);letter-spacing:.08em;color:var(--graphite)}
+.glance dd a{font-weight:500}
 .hero h1 .given{display:block;font-size:.5em;font-style:italic;letter-spacing:0;color:var(--graphite);margin-top:8px}
 .lede{max-width:38ch;font-size:clamp(1.12rem,1.7vw,1.32rem);line-height:1.5;margin-bottom:30px}
 .portrait{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:2px;background:var(--paper-2)}
@@ -276,7 +278,7 @@ a.zoom:hover .zoom-badge,a.zoom:focus-visible .zoom-badge{background:#fff;color:
 .contact .label{color:color-mix(in srgb,var(--on-ink) 70%,transparent)}
 .contact h2{font:400 clamp(2rem,4vw,3.2rem)/1.05 var(--serif);margin:12px 0 36px}
 .contact-grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:28px}
-.contact-grid > div{grid-column:span 4}
+.contact-grid > div{grid-column:span 3}
 .contact-grid p{margin-top:8px}
 .contact a{text-decoration-color:color-mix(in srgb,var(--on-ink) 50%,transparent)}
 .contact .signoff{margin-top:56px;font-size:.95rem;color:color-mix(in srgb,var(--on-ink) 82%,transparent)}
