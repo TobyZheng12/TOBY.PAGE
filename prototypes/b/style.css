@@ -199,6 +199,23 @@ details[open]::details-content{block-size:auto}
 @media (max-width:900px){.project-intro,.project-facts,.also-text,.shot-small{grid-column:1/-1}}
 @media (max-width:620px){.facts div{grid-template-columns:1fr;gap:4px}.nowrap{white-space:normal}}
 
+/* Enlargeable screenshots + viewer */
+a.zoom{position:relative;display:block;text-decoration:none;cursor:zoom-in;border-radius:3px}
+a.zoom picture,a.zoom img{display:block}
+.zoom-badge{position:absolute;right:10px;top:10px;display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:3px;background:color-mix(in srgb,#13262a 88%,transparent);color:#f4efe6;font:500 .72rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;transition:background .2s}
+a.zoom:hover .zoom-badge,a.zoom:focus-visible .zoom-badge{background:var(--seal)}
+.viewer{width:min(96vw,1500px);max-width:none;max-height:94vh;padding:0;border:0;border-radius:4px;background:var(--card);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.5);overflow:hidden}
+.viewer::backdrop{background:rgba(12,18,18,.78)}
+.viewer-bar{display:flex;align-items:center;gap:8px 16px;flex-wrap:wrap;padding:8px 8px 8px 16px;border-bottom:1px solid var(--rule)}
+.viewer-cap{flex:1 1 260px;font-size:.88rem;color:var(--graphite)}
+.viewer-size,.viewer-close{min-height:44px;min-width:44px;padding:0 14px;border:1px solid var(--rule);border-radius:3px;background:var(--paper);color:var(--ink);font:500 .88rem var(--sans);cursor:pointer}
+.viewer-close{font-size:1rem;padding:0}
+.viewer-open{display:inline-flex;align-items:center;min-height:44px;font-size:.88rem;font-weight:500}
+.viewer-stage{display:grid;place-items:safe center;max-height:calc(94vh - 62px);overflow:auto;overscroll-behavior:contain;background:#fff}
+.viewer-stage img{width:100%;height:auto;margin:auto}
+.viewer.is-actual .viewer-stage img{width:auto;max-width:none}
+@media (max-width:620px){.viewer{width:100vw;max-height:100dvh;height:100dvh;border-radius:0}.viewer-stage{height:calc(100dvh - 120px);max-height:none}.viewer-cap{flex-basis:100%;order:-1;padding-top:6px}.viewer-open{margin-right:auto}}
+
 /* People band ---------------------------------------------------------- */
 .band{background:var(--paper-2)}
 .people{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:20px}

@@ -130,17 +130,18 @@
           <div><dt class="label">What I learned</dt><dd>How to use AI to build a product that solves my own problem.</dd></div>
         </dl>
         <figure class="shot shot-main">
+          <a class="zoom" href="../img/coffeechat-plan-full.webp" data-w="1455" data-h="721" data-caption="CoffeeChat AI public demo: full conversation-plan screen. Fictional demo data." aria-label="Enlarge screenshot: CoffeeChat AI conversation plan (fictional demo data)">
           <picture>
             <source media="(max-width:620px)" srcset="../img/coffeechat-plan-questions.webp" width="388" height="194">
             <img src="../img/coffeechat-plan.webp" width="1114" height="700" loading="lazy" alt="CoffeeChat AI demo screen: a 30-minute conversation plan for a fictional contact, with an opening line, three goals, six prioritized questions and closing guidance.">
-          </picture>
+          </picture><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9"/></svg>Enlarge</span></a>
           <figcaption><span class="label">Public demo</span> A conversation plan prepared before a coffee chat. <span class="nowrap">All people, companies and details are fictional demo data.</span></figcaption>
         </figure>
         <details class="project-more">
           <summary><span class="pm" aria-hidden="true"></span>See the follow-up view, and how it’s built</summary>
           <div class="dbody">
             <figure class="shot">
-              <img src="../img/coffeechat-followups.webp" width="1114" height="425" loading="lazy" alt="CoffeeChat AI demo follow-ups screen: a suggested follow-up for a fictional contact, with the reason for the suggestion and a message angle.">
+              <a class="zoom" href="../img/coffeechat-followups-full.webp" data-w="1455" data-h="721" data-caption="CoffeeChat AI public demo: full follow-ups screen. Fictional demo data." aria-label="Enlarge screenshot: CoffeeChat AI follow-ups (fictional demo data)"><img src="../img/coffeechat-followups.webp" width="1114" height="425" loading="lazy" alt="CoffeeChat AI demo follow-ups screen: a suggested follow-up for a fictional contact, with the reason for the suggestion and a message angle."><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9"/></svg>Enlarge</span></a>
               <figcaption>Follow-up suggestions, each with a reason. Fictional demo data.</figcaption>
             </figure>
             <p>Next.js, TypeScript and Supabase, built with Claude Code.</p>
@@ -153,8 +154,9 @@
             <p><a class="tlink" href="https://scripture-primer.vercel.app/">Visit Scripture Story Primer ↗</a></p>
           </div>
           <figure class="shot shot-small">
-            <picture><source media="(max-width:620px)" srcset="../img/scripture-primer-title.webp" width="440" height="110">
-            <img src="../img/scripture-primer-story.webp" width="780" height="375" loading="lazy" alt="Scripture Story Primer screen for “The Call of Abraham,” showing the Chinese title and a one-line summary of the story."></picture>
+            <a class="zoom" href="../img/scripture-primer-full.webp" data-w="1455" data-h="665" data-caption="Scripture Story Primer: full story screen for “The Call of Abraham.”" aria-label="Enlarge screenshot: Scripture Story Primer story screen">
+            <picture><source media="(max-width:620px)" srcset="../img/scripture-primer-mobile.webp" width="752" height="306">
+            <img src="../img/scripture-primer-story.webp" width="780" height="375" loading="lazy" alt="Scripture Story Primer screen for “The Call of Abraham,” showing the Chinese title and a one-line summary of the story."></picture><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2.5h4v4M13.5 2.5 9 7M6.5 13.5h-4v-4M2.5 13.5 7 9"/></svg>Enlarge</span></a>
           </figure>
         </div>
       </div>
@@ -225,6 +227,36 @@
     </div>
     <p class="fine">© Toby Zheng · Provo, Utah</p>
   </div></footer>
+
+  <dialog class="viewer" aria-label="Enlarged screenshot">
+    <div class="viewer-bar">
+      <p class="viewer-cap"></p>
+      <button type="button" class="viewer-size" aria-pressed="false">Actual size</button>
+      <a class="viewer-open" href="#" target="_blank" rel="noopener">Open in new tab ↗</a>
+      <button type="button" class="viewer-close" aria-label="Close">✕</button>
+    </div>
+    <div class="viewer-stage"><img alt=""></div>
+  </dialog>
+  <script>
+  /* Screenshot viewer (progressive enhancement). Without JS, each image link opens the full screenshot. */
+  (() => {
+    const dlg = document.querySelector('.viewer'); if (!dlg || !dlg.showModal) return;
+    const img = dlg.querySelector('img'), cap = dlg.querySelector('.viewer-cap'), size = dlg.querySelector('.viewer-size'), open = dlg.querySelector('.viewer-open');
+    let opener = null;
+    const setActual = on => { dlg.classList.toggle('is-actual', on); size.setAttribute('aria-pressed', on); size.textContent = on ? 'Fit to screen' : 'Actual size'; };
+    document.querySelectorAll('a.zoom').forEach(a => a.addEventListener('click', e => {
+      e.preventDefault(); opener = a;
+      img.src = a.href; img.width = a.dataset.w; img.height = a.dataset.h;
+      img.alt = (a.querySelector('img') || {}).alt || ''; cap.textContent = a.dataset.caption; open.href = a.href;
+      setActual(false); dlg.showModal(); dlg.querySelector('.viewer-close').focus();
+    }));
+    size.addEventListener('click', () => { const on = !dlg.classList.contains('is-actual'); setActual(on);
+      if (on) { const st = dlg.querySelector('.viewer-stage'); st.scrollLeft = (st.scrollWidth - st.clientWidth) / 2; } });
+    dlg.querySelector('.viewer-close').addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', e => { if (e.target === dlg || e.target.classList.contains('viewer-stage')) dlg.close(); });
+    dlg.addEventListener('close', () => { img.removeAttribute('src'); if (opener) opener.focus(); });
+  })();
+  </script>
   <script src="review.js"></script>
 </body>
 </html>
