@@ -4,9 +4,6 @@
 // claim boundaries.
 (() => {
   const ITEMS = [
-    [2, 'cutting, machining, welding and painting', 'Still open: which of these processes you personally analyzed (your answer repeated the list in brackets).'],
-    [3, 'I coordinated eight inspection-digitization pilots across four suppliers.', 'Four suppliers confirmed. Still open: your exact role (your answer ended with “developed something specific, etc.”).'],
-    [3, 'Bluetooth torque tools', 'Still open: the full list of technologies (you mentioned “some other technologies”).'],
     [5, 'The gap is where the questions start', 'Your edits applied; approve the illustration as shown.'],
     [6, 'Next.js, TypeScript and Supabase, built with Claude Code.', 'From your old site; not yet confirmed.'],
     [12, 'All people, companies and details are fictional demo data.', 'Demo screenshots: fictional persona and data, not your activity or traction. Crops only; no UI altered.'],
