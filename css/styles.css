@@ -141,20 +141,20 @@ a:hover{text-decoration-color:var(--seal);text-decoration-thickness:2px}
 .cf li{display:grid;grid-template-columns:128px 1fr;align-items:center;gap:12px;font-size:.86rem}
 .cf .t{color:var(--graphite)}
 .cf .track{position:relative;height:22px}
-.cf .bar{position:absolute;top:0;bottom:0;left:calc(var(--s)*1%);width:calc(var(--w)*1%);background:color-mix(in srgb,var(--ink) 16%,transparent);border-radius:1px}
+.cf .bar{position:absolute;top:0;bottom:0;left:calc(var(--s)*1%);width:calc(var(--w)*1%);background:color-mix(in srgb,var(--ink) 14%,transparent);border:1.5px solid var(--graphite);border-radius:1px}
 .cf li.proc .t{color:var(--ink);font-weight:500}
-.cf li.proc .bar{background:var(--ink)}
+.cf li.proc .bar{background:var(--ink);border-color:var(--ink)}
 .cf li.sum{margin-top:8px;padding-top:10px;border-top:1px dashed var(--rule)}
 .cf li.sum .t,.cf li.quote .t{color:var(--ink);font-weight:600}
-.cf li.sum .bar{background:var(--ink)}
-.cf li.quote .bar{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--ink) 22%,transparent) 0 6px,transparent 6px 10px);border:1px solid color-mix(in srgb,var(--ink) 40%,transparent)}
+.cf li.sum .bar{background:var(--ink);border-color:var(--ink)}
+.cf li.quote .bar{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--ink) 22%,transparent) 0 6px,transparent 6px 10px);border:1.5px solid var(--graphite)}
 .cf li.quote .gap{position:absolute;top:-3px;bottom:-3px;left:calc(var(--s)*1%);width:calc(var(--w)*1%);border:2px solid var(--seal);border-radius:2px}
 .cf-note{display:flex;justify-content:flex-end;margin:10px 0 0;font:italic 400 1rem/1.3 var(--serif);color:var(--seal)}
 .cf-note span{max-width:24ch;text-align:right}
 .costfig figcaption{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:16px;padding-top:12px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--graphite)}
 .key{display:inline-flex;align-items:center;gap:6px}
 .key i{display:inline-block;width:14px;height:10px;background:var(--ink)}
-.key i.g{background:color-mix(in srgb,var(--ink) 16%,transparent)}
+.key i.g{background:color-mix(in srgb,var(--ink) 14%,transparent);border:1.5px solid var(--graphite)}
 @media (max-width:520px){.costfig{padding:18px 14px 14px}.cf li{grid-template-columns:96px 1fr;font-size:.8rem;gap:8px}}
 
 /* Pilots strip */
@@ -282,10 +282,11 @@ a.zoom:hover .zoom-badge,a.zoom:focus-visible .zoom-badge{background:#fff;color:
 .contact{background:var(--footer-bg);color:var(--footer-text);padding:clamp(64px,8vw,104px) 0 40px}
 .contact .label{color:var(--footer-muted)}
 .contact h2{font:400 clamp(2rem,4vw,3.2rem)/1.05 var(--serif);margin:12px 0 36px}
-.reasons{display:grid;grid-template-columns:1fr 1fr;gap:20px 48px;max-width:960px;margin:-12px 0 44px}
-.reasons p{color:var(--footer-soft)}
-.reasons b{display:block;margin-bottom:4px;color:var(--footer-text);font-weight:600}
-@media (max-width:760px){.reasons{grid-template-columns:1fr}}
+.invite{max-width:720px;margin:-12px 0 44px}
+.invite p{color:var(--footer-soft);font-size:1.08rem}
+.invite-mail{margin-top:22px}
+.invite-mail span{display:block;margin-bottom:4px;color:var(--footer-muted);font-size:.86rem;font-weight:600}
+.invite-mail a{color:var(--footer-text);font:400 clamp(1.4rem,3.2vw,2rem)/1.2 var(--serif);word-break:break-word}
 .contact-grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:28px}
 .contact-grid > div{grid-column:span 3}
 .contact-grid p{margin-top:8px}
