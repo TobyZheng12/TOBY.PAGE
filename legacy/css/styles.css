@@ -14,3 +14,8 @@
 @media(max-width:680px){.shell{width:min(calc(100% - 28px),var(--max))}.header-inner{min-height:68px}.site-nav{inset-block-start:68px;height:calc(100vh - 68px)}.brand>span:last-child{display:none}.hero{padding-top:72px}.hero::after{top:20%;right:-50%;width:100vw;height:100vw}.hero-actions .button{flex:1 1 auto}.hero-actions .button-primary{flex-basis:100%}.about-columns,.skills-grid{grid-template-columns:1fr;gap:10px}.feature-experience,.experience-row{grid-template-columns:1fr;gap:24px}.feature-experience{padding:28px 22px}.experience-row{padding:34px 0}.role-line{flex-direction:column;gap:8px}.project-preview{min-height:380px;padding:28px 22px}.project-content{padding:34px 22px}.case-study div{grid-template-columns:1fr;gap:6px}.contact-actions{align-items:flex-start;flex-direction:column}.light-link{margin:12px 0 0}.footer-inner{grid-template-columns:1fr;gap:7px}.footer-inner p:nth-child(2),.footer-inner a{text-align:left}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 @media print{.site-header,.hero-actions,.contact-section,.site-footer{display:none}body,.section-tinted,.section-dark{background:#fff;color:#111}.section{padding:40px 0}}
+/* Readability fixes, Nov 2026: keep text legible in both themes without changing the layout */
+.contact-section .section-number,.contact-section .contact-inner>p:not(.section-number){color:rgba(255,255,255,.92)}
+[data-theme=dark] .contact-section{background:#0b61d8}
+[data-theme=dark] .button-primary,[data-theme=dark] .skip-link{color:#08203f}
+.contact-section :focus-visible,.site-footer :focus-visible{outline-color:#fff}
