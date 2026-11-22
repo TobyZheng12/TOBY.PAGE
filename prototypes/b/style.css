@@ -16,7 +16,9 @@
 :root{
   --paper:#faf9f6; --paper-2:#f1ede5; --card:#ffffff;
   --ink:#13262a; --graphite:#4b5758; --rule:#e0d9cc; --rule-strong:#13262a;
-  --seal:#b23b25; --seal-soft:#f1d9cf; --on-ink:#f2ece1;
+  --seal:#b23b25; --seal-soft:#f1d9cf; --seal-ink:#fbf3ea;
+  /* Footer has its own palette so it stays readable in both themes */
+  --footer-bg:#13262a; --footer-text:#f2ece1; --footer-soft:#d9d5cb; --footer-muted:#b4b5ad;
   --serif:"Newsreader",Georgia,"Songti SC","Noto Serif SC",serif;
   --sans:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
@@ -28,7 +30,8 @@
 @media (prefers-color-scheme:dark){:root{
   --paper:#111816; --paper-2:#172120; --card:#18221f;
   --ink:#ebe5d9; --graphite:#a9b2ad; --rule:#33413e; --rule-strong:#ebe5d9;
-  --seal:#e47a5e; --seal-soft:#3a2520; --on-ink:#111816;
+  --seal:#e47a5e; --seal-soft:#3a2520; --seal-ink:#111816;
+  --footer-bg:#0b100f; --footer-text:#ebe5d9; --footer-soft:#cfcabf; --footer-muted:#a9b2ad;
 }}
 
 *,*::before,*::after{box-sizing:border-box}
@@ -55,7 +58,7 @@ a:hover{text-decoration-color:var(--seal);text-decoration-thickness:2px}
 .site-head{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
 .site-head .wrap{display:flex;align-items:center;gap:24px;min-height:60px}
 .mark{display:flex;align-items:center;gap:10px;min-height:44px;font-weight:600;font-size:.95rem;text-decoration:none}
-.seal{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:3px;background:var(--seal);color:#fbf3ea;font:600 .78rem/1 var(--serif);letter-spacing:.02em}
+.seal{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:3px;background:var(--seal);color:var(--seal-ink);font:600 .78rem/1 var(--serif);letter-spacing:.02em}
 .site-head nav{display:flex;gap:4px;margin-left:auto}
 .site-head nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;font-size:.9rem;font-weight:500;color:var(--graphite);text-decoration:none}
 .site-head nav a:hover{color:var(--ink)}
@@ -209,7 +212,8 @@ details[open]::details-content{block-size:auto}
 a.zoom{position:relative;display:block;text-decoration:none;cursor:zoom-in;border-radius:3px}
 a.zoom picture,a.zoom img{display:block}
 .zoom-badge{position:absolute;right:10px;top:10px;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.86);color:#13262a;border:1px solid rgba(19,38,42,.14);box-shadow:0 1px 3px rgba(19,38,42,.12);transition:color .2s,background .2s}
-a.zoom:hover .zoom-badge,a.zoom:focus-visible .zoom-badge{background:#fff;color:var(--seal)}
+/* The badge is always a white chip over light screenshots, so its hover color stays fixed in both themes */
+a.zoom:hover .zoom-badge,a.zoom:focus-visible .zoom-badge{background:#fff;color:#b23b25}
 .shot .hint{color:var(--graphite)}
 .viewer{width:min(96vw,1500px);max-width:none;max-height:94vh;padding:0;border:0;border-radius:4px;background:var(--card);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.5);overflow:hidden}
 .viewer::backdrop{background:rgba(12,18,18,.78)}
@@ -274,17 +278,18 @@ a.zoom:hover .zoom-badge,a.zoom:focus-visible .zoom-badge{background:#fff;color:
 @media (max-width:900px){.path-story,.xp{grid-column:1/-1}.xp{order:-1}}
 
 /* Contact -------------------------------------------------------------- */
-.contact{background:var(--ink);color:var(--on-ink);padding:clamp(64px,8vw,104px) 0 40px}
-.contact .label{color:color-mix(in srgb,var(--on-ink) 70%,transparent)}
+.contact{background:var(--footer-bg);color:var(--footer-text);padding:clamp(64px,8vw,104px) 0 40px}
+.contact .label{color:var(--footer-muted)}
 .contact h2{font:400 clamp(2rem,4vw,3.2rem)/1.05 var(--serif);margin:12px 0 36px}
 .contact-grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:28px}
 .contact-grid > div{grid-column:span 3}
 .contact-grid p{margin-top:8px}
-.contact a{text-decoration-color:color-mix(in srgb,var(--on-ink) 50%,transparent)}
-.contact .signoff{margin-top:56px;font-size:.95rem;color:color-mix(in srgb,var(--on-ink) 82%,transparent)}
-.contact .fine{margin-top:6px;font-size:.82rem;color:color-mix(in srgb,var(--on-ink) 65%,transparent)}
+.contact a{text-decoration-color:color-mix(in srgb,var(--footer-text) 50%,transparent)}
+.contact a:hover{text-decoration-color:var(--footer-text)}
+.contact :focus-visible{outline-color:var(--footer-text)}
+.contact .signoff{margin-top:56px;font-size:.95rem;color:var(--footer-soft)}
+.contact .fine{margin-top:6px;font-size:.82rem;color:var(--footer-muted)}
 @media (max-width:860px){.contact-grid > div{grid-column:1/-1}}
-@media (prefers-color-scheme:dark){.contact{background:#0b100f;color:#ebe5d9}.contact .label{color:#a9b2ad}}
 
 /* Motion --------------------------------------------------------------- */
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
