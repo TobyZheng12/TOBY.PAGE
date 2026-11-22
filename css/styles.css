@@ -282,6 +282,10 @@ a.zoom:hover .zoom-badge,a.zoom:focus-visible .zoom-badge{background:#fff;color:
 .contact{background:var(--footer-bg);color:var(--footer-text);padding:clamp(64px,8vw,104px) 0 40px}
 .contact .label{color:var(--footer-muted)}
 .contact h2{font:400 clamp(2rem,4vw,3.2rem)/1.05 var(--serif);margin:12px 0 36px}
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:20px 48px;max-width:960px;margin:-12px 0 44px}
+.reasons p{color:var(--footer-soft)}
+.reasons b{display:block;margin-bottom:4px;color:var(--footer-text);font-weight:600}
+@media (max-width:760px){.reasons{grid-template-columns:1fr}}
 .contact-grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:28px}
 .contact-grid > div{grid-column:span 3}
 .contact-grid p{margin-top:8px}
